@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en" class="at-top">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-es="Plazos fijos con agente · Lala">Agentic term deposits · Lala</title>
+  <meta name="description" content="Proof of concept: an agent that suggests how much money to set aside in a term deposit, for one of Argentina's largest banks." data-es-a-content="Prueba de concepto: un agente que sugiere cuánto dinero separar en un plazo fijo, para uno de los bancos más grandes de Argentina.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Lala Picoroso · Senior Product Designer">
+  <meta property="og:title" content="Agentic term deposits · Lala">
+  <meta property="og:description" content="Proof of concept: an agent that suggests how much money to set aside in a term deposit, for one of Argentina&#x27;s largest banks.">
+  <meta property="og:url" content="https://lalapicoroso.github.io/plazo-fijo.html">
+  <meta property="og:image" content="https://lalapicoroso.github.io/assets/og/plazo-fijo.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Geist:wght@300..600&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css?v=20261109-19">
+  <script src="js/theme.js?v=20261109-19"></script>
+  <script src="js/i18n.js?v=20261109-19"></script>
+  <script src="js/transition.js?v=20261109-19"></script>
+  <script src="js/motion.js?v=20261109-19" defer></script>
+  <script src="js/case.js?v=20261109-19" defer></script>
+</head>
+<body class="has-pill case--plazo-fijo">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="index.html" class="logo" aria-label="Home" data-es-a-aria-label="Inicio">LP</a>
+      <span class="status" data-es="Buenos Aires · Disponible">Buenos Aires · Available</span>
+      <button class="lang-toggle" type="button" aria-label="Ver en español" data-es-a-aria-label="View in English"><span lang="en">EN</span><i aria-hidden="true">/</i><span lang="es">ES</span></button>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="cs-hero ed-hero">
+      <div class="cs-wrap">
+        <a class="cs-back" href="index.html#work" data-es="← Volver al portfolio">← Back to portfolio</a>
+        <p class="cs-eyebrow" data-es="Prueba de concepto · Fintech · Ahorro">Proof of concept · Fintech · Savings</p>
+        <h1 class="ed-title" data-es="Plazos fijos, <span class='accent'>con un agente que hace la cuenta.</span>">Term deposits, <span class="accent">with an agent that does the math.</span></h1>
+        <div class="ed-hero__grid">
+          <div>
+            <p class="ed-intro" data-es="Una prueba de concepto para uno de los bancos más grandes de Argentina. En lugar de pedirle a la gente que calcule sola cuánto dinero puede separar y por cuánto tiempo, <mark class='hl'>un agente se lo sugiere y la persona decide</mark>.">A proof of concept for one of Argentina’s largest banks. Instead of asking people to work out on their own how much money they can set aside and for how long, <mark class="hl">an agent suggests it and the person decides</mark>.</p>
+          </div>
+          <dl class="ed-meta">
+            <div><dt data-es="Rol">Role</dt><dd data-es="Senior Product Designer, de punta a punta">Senior Product Designer, end to end</dd></div>
+            <div><dt data-es="Cliente">Client</dt><dd data-es="Uno de los bancos más grandes de Argentina">One of Argentina’s largest banks</dd></div>
+            <div><dt data-es="Alcance">Scope</dt><dd data-es="App mobile · Ahorro">Mobile banking app · Savings</dd></div>
+            <div><dt data-es="Período">Timeline</dt><dd>2026</dd></div>
+            <div><dt data-es="Industria">Industry</dt><dd>Fintech</dd></div>
+            <div><dt data-es="Estado">Status</dt><dd data-es="Prueba de concepto">Proof of concept</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="ed-cover reveal">
+      <div class="cs-wrap">
+        <figure class="ed-stage ed-stage--flush"><img src="assets/plazo-fijo/hero.jpg" alt="Three screens: a suggestion card on the bank's home screen, the agent's proposal to set aside $300,000 for 30 days, and the term deposits overview" data-es-a-alt="Tres pantallas: una sugerencia en el inicio del banco, la propuesta del agente de separar $300.000 por 30 días y el resumen de plazos fijos"></figure>
+      </div>
+    </section>
+
+    <section class="cs-section ed-section" id="problem">
+      <div class="cs-wrap reveal">
+        <p class="ed-label" data-es="Contexto y problema">Context &amp; Problem</p>
+        <h2 class="ed-h2" data-es="Mucha gente guarda sus ahorros <span class='accent'>fuera del banco.</span>">Many people keep their savings <span class="accent">outside the bank.</span></h2>
+        <div class="ed-lead">
+          <p data-es="Un plazo fijo es simple en el papel: dejás dinero en el banco por un tiempo fijo y lo recuperás con un interés que conocés de antemano. Aun así, mucha gente prefiere guardar sus ahorros en otro lado, y en la banca digital compite en desventaja contra opciones más ágiles, como los fondos money market o las cuentas remuneradas.">A term deposit is simple on paper: you leave money in the bank for a fixed time and get it back with interest you know in advance. Still, many people prefer to keep their savings elsewhere, and in digital banking it competes at a disadvantage against more agile options, like money market funds or interest-bearing accounts.</p>
+          <p data-es="No había research, así que arranqué escribiendo hipótesis que después se pudieran testear y refutar.">There was no research, so I started by writing down hypotheses that could later be tested and proven wrong.</p>
+        </div>
+        <div class="ed-methods">
+          <div><p class="ed-methods__n" data-es="Encontrarlo">Findability</p><span class="ed-methods__big" data-es="Vive en Inversiones, al lado de acciones y cripto, y no se percibe como algo para montos chicos.">It lives under Investments, next to stocks and crypto, and doesn’t feel meant for small amounts.</span></div>
+          <div><p class="ed-methods__n" data-es="Valor">Value</p><span class="ed-methods__big" data-es="No queda claro cuánto se gana ni si conviene frente a dejar el dinero quieto.">It’s not clear how much you earn, or whether it beats leaving the money where it is.</span></div>
+          <div><p class="ed-methods__n" data-es="Disparadores">Triggers</p><span class="ed-methods__big" data-es="La app nunca lo sugiere, aunque el dinero esté quieto hace semanas o entre un bono.">The app never brings it up, even when money sits idle for weeks or a bonus comes in.</span></div>
+          <div><p class="ed-methods__n" data-es="Liquidez">Liquidity</p><span class="ed-methods__big" data-es="Da miedo no tener el dinero si aparece un imprevisto.">People fear not having the money if something unexpected comes up.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section cs-section--tint ed-section" id="exploration">
+      <div class="cs-wrap reveal">
+        <p class="ed-label" data-es="Primera exploración">First exploration</p>
+        <h2 class="ed-h2" data-es="Un flujo guiado para decidir antes de comprometerse.">A guided flow to decide before committing.</h2>
+        <div class="ed-lead"><p data-es="La primera idea no fue vender mejor el plazo fijo, sino resolver el momento anterior: ayudar a reconocer qué parte del dinero se puede separar <mark class='hl'>sin sentir que se pierde el control</mark>.">My first idea wasn’t to sell term deposits better, but to solve the moment before: helping people recognize what part of their money they can set aside <mark class="hl">without feeling they lose control</mark>.</p></div>
+        <ol class="ed-learn ed-steps">
+          <li><b><i>01</i> <span data-es="Primero tu monto, después tu tiempo">Your amount first, then your time</span></b><span data-es="Cuánto separás y qué te queda disponible, antes de hablar de tasas.">How much you set aside and what stays available, before any rates.</span></li>
+          <li><b><i>02</i> <span data-es="Tres fechas concretas">Three concrete dates</span></b><span data-es="30, 60 o 90 días en lugar de un calendario abierto.">30, 60 or 90 days instead of an open calendar.</span></li>
+          <li><b><i>03</i> <span data-es="Una salida en cada paso">A way out at every step</span></b><span data-es="“No estoy segura”, sin presión, y una casilla para confirmar que el dinero queda inmovilizado.">“I’m not sure”, without pressure, and a checkbox to acknowledge the money is locked.</span></li>
+        </ol>
+        <figure class="ed-shot ed-shot--bare"><img src="assets/plazo-fijo/wireframes-1.jpg" alt="Early wireframes: home, month summary, amount and date" data-es-a-alt="Primeros wireframes: inicio, resumen del mes, monto y fecha" loading="lazy"><figcaption data-es="Wireframes en baja, para ordenar el flujo y el texto antes de cualquier decisión visual.">Low-fidelity wireframes, to sort out the flow and the copy before any visual decision.</figcaption></figure>
+        <figure class="ed-shot ed-shot--bare"><img src="assets/plazo-fijo/pantallas-1.jpg" alt="First designs: home prompt, amount, date and simulation" data-es-a-alt="Primeros diseños: invitación en el inicio, monto, fecha y simulación" loading="lazy"><figcaption data-es="Los primeros diseños del flujo guiado, siguiendo el estilo de la app del banco.">The first designs of the guided flow, following the bank app’s style.</figcaption></figure>
+        <div class="ed-lead" style="margin-top:var(--ed-gap-l)"><p data-es="El flujo respondía bien al valor y a la liquidez, pero no a las otras dos hipótesis: <mark class='hl'>seguía dependiendo de que la persona lo encontrara, hiciera la cuenta y decidiera sola</mark>.">The flow answered value and liquidity well, but not the other two hypotheses: <mark class="hl">it still depended on people finding it, doing the math and deciding on their own</mark>.</p></div>
+      </div>
+    </section>
+
+    <section class="cs-section ed-section" id="pivot">
+      <div class="cs-wrap reveal">
+        <p class="ed-label" data-es="El giro">The pivot</p>
+        <h2 class="ed-h2" data-es="Decidimos ir por un agente, <span class='accent'>para que decidir sea más fácil.</span>">We chose an agent, <span class="accent">to make the decision easier.</span></h2>
+        <div class="ed-lead"><p data-es="En lugar de que la persona haga la cuenta, la hace la app: mira ingresos y gastos, detecta el dinero quieto y propone cuánto separar y por cuánto tiempo. La persona sigue decidiendo. El desafío de diseño dejó de ser el formulario y pasó a ser la confianza.">Instead of the person doing the math, the app does it: it looks at income and expenses, spots idle money and suggests how much to set aside and for how long. The person still decides. The design challenge stopped being the form and became trust.</p></div>
+        <div class="ed-methods">
+          <div><p class="ed-methods__n" data-es="Encontrarlo">Findability</p><span class="ed-methods__big" data-es="No hay que buscarlo: la sugerencia aparece en el inicio, cuando importa.">No need to look for it: the suggestion shows up on the home screen, when it matters.</span></div>
+          <div><p class="ed-methods__n" data-es="Valor">Value</p><span class="ed-methods__big" data-es="Cada sugerencia dice cuánto ganás en pesos y por qué es buen momento.">Every suggestion says how much you earn in pesos and why it’s a good time.</span></div>
+          <div><p class="ed-methods__n" data-es="Disparadores">Triggers</p><span class="ed-methods__big" data-es="Detecta el dinero quieto, el sueldo acreditado y los vencimientos.">It spots idle money, a paycheck coming in and upcoming maturities.</span></div>
+          <div><p class="ed-methods__n" data-es="Liquidez">Liquidity</p><span class="ed-methods__big" data-es="Nunca toca una reserva que definís vos, y te muestra de dónde sacar dinero si lo necesitás.">It never touches a reserve you set, and shows where to get money if you need it.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section cs-section--tint ed-section" id="decisions">
+      <div class="cs-wrap reveal">
+        <p class="ed-label" data-es="Decisiones">Decisions</p>
+        <h2 class="ed-h2" data-es="Diseñar la confianza, no la IA.">Designing trust, not the AI.</h2>
+
+        <div class="ed-sub-block ed-sub-block--first">
+          <h3 class="ed-h4 ed-h4--big ed-h4--num" data-es="1. Una escalera de confianza">1. A ladder of trust</h3>
+          <div class="ed-lead"><p data-es="La persona elige cuánto deja hacer al agente: que le avise, que le proponga (la opción recomendada) o que arme y renueve dentro de sus reglas. Las reglas se dicen en lenguaje simple: <mark class='hl'>una reserva que nunca se toca</mark>, el plazo que prefiere y qué pasa al vencer.">People choose how much the agent can do: notify them, suggest (the recommended option), or set up and renew within their rules. The rules are plain language: <mark class="hl">a reserve that is never touched</mark>, a preferred term, and what happens at maturity.</p></div>
+          <figure class="ed-shot ed-shot--bare ed-shot--strip"><img src="assets/plazo-fijo/setup.webp" alt="Setup: what the suggestions do, choosing how much help you want, and your rules" data-es-a-alt="Configuración: qué hacen las sugerencias, elegir cuánta ayuda querés y tus reglas" loading="lazy"></figure>
+        </div>
+
+        <div class="ed-sub-block">
+          <h3 class="ed-h4 ed-h4--big ed-h4--num" data-es="2. Una sugerencia que lleva a la acción">2. A suggestion that leads to action</h3>
+          <div class="ed-lead"><p data-es="“Separá $300.000 por 30 días”: el título dice qué hacer, y debajo están los intereses, la fecha de cobro, cuánto queda en la cuenta y por qué es buen momento. Se puede cambiar el monto y el plazo con los números en vivo, y antes de confirmar con Face ID la revisión muestra TNA, TEA y la casilla del primer flujo.">“Set aside $300,000 for 30 days”: the title says what to do, and underneath come the interest, the payout date, what stays in the account and why it’s a good time. Amount and term can be changed with live numbers, and before confirming with Face ID the review shows the rates and the checkbox from the first flow.</p></div>
+          <figure class="ed-shot ed-shot--bare ed-shot--strip"><img src="assets/plazo-fijo/proposal.webp" alt="The proposal, changing amount or term, the review and the confirmation" data-es-a-alt="La propuesta, cambiar monto o plazo, la revisión y la confirmación" loading="lazy"></figure>
+        </div>
+
+        <div class="ed-sub-block">
+          <h3 class="ed-h4 ed-h4--big ed-h4--num" data-es="3. El agente tiene un color, no un personaje">3. The agent has a color, not a persona</h3>
+          <div class="ed-lead"><p data-es="Sin avatar ni nombre: el agente habla como la app. Se lo reconoce por el verde agua y un destello, y esa es la regla que sostiene todo el sistema: <mark class='hl'>si algo es agua, lo está diciendo o sugiriendo el agente</mark>. El violeta queda para lo que confirma la persona.">No avatar, no name: the agent speaks like the app. It’s recognized by agua and a spark, and that’s the rule holding the whole system together: <mark class="hl">if something is agua, the agent is saying or suggesting it</mark>. Violet is for what the person confirms.</p></div>
+          <figure class="ed-shot ed-shot--bare"><img src="assets/plazo-fijo/ds-agent.webp" alt="A suggestion card with the agua agent color, next to the rules for using it" data-es-a-alt="Una tarjeta de sugerencia con el color agua del agente, junto a las reglas para usarlo" loading="lazy"></figure>
+        </div>
+
+        <div class="ed-sub-block">
+          <h3 class="ed-h4 ed-h4--big ed-h4--num" data-es="4. Después de armarlo">4. After setting it up</h3>
+          <div class="ed-lead"><p data-es="Cuando vence un plazo fijo, el agente sugiere renovarlo y ofrece otras opciones. Si aparece un imprevisto, “Necesito usar mi dinero” muestra primero lo disponible, después lo que se libera y por último el rescate. Y todo lo que hizo el agente queda en una actividad, con un interruptor para pausarlo.">When a deposit matures, the agent suggests renewing it and offers other options. If something unexpected comes up, “I need my money” shows what’s available first, then what’s being released, and only then early withdrawal. And everything the agent did lives in an activity log, with a switch to pause it.</p></div>
+          <figure class="ed-shot ed-shot--bare ed-shot--strip"><img src="assets/plazo-fijo/later.webp" alt="Weeks later: the overview with a renewal suggestion, options at maturity, I need my money, and activity and rules" data-es-a-alt="Semanas después: el resumen con una sugerencia de renovación, opciones al vencer, necesito usar mi dinero, y actividad y reglas" loading="lazy"></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section ed-section" id="design-system">
+      <div class="cs-wrap reveal">
+        <p class="ed-label">Design system</p>
+        <h2 class="ed-h2" data-es="Un módulo con identidad propia.">A module with its own identity.</h2>
+        <div class="ed-lead"><p data-es="Vive adentro de la app del banco, que conserva su navegación, pero el módulo se permite ser más wallet que banco tradicional: superficies claras apenas teñidas, un bloque oscuro con brillo para lo importante, un violeta para la acción y el agua para el agente. Antes de cerrar la paleta probé varias combinaciones sobre las mismas pantallas.">It lives inside the bank’s app, which keeps its navigation, but the module allows itself to feel more like a wallet than a traditional bank: lightly tinted surfaces, a dark glowing block for what matters, violet for action and agua for the agent. I tried several combinations on the same screens before settling the palette.</p></div>
+        <figure class="ed-shot ed-shot--bare"><img src="assets/plazo-fijo/ds-color.webp" alt="The palette and the money bar, where each segment has its label underneath" data-es-a-alt="La paleta y la barra de dinero, donde cada tramo tiene su label debajo" loading="lazy"></figure>
+        <figure class="ed-shot ed-shot--bare"><img src="assets/plazo-fijo/ds-components.webp" alt="Components: buttons, chips, selection, amount stepper, list rows and notices" data-es-a-alt="Componentes: botones, chips, selección, selector de monto, filas de lista y avisos" loading="lazy"></figure>
+        <p class="cs-proto__open"><a href="assets/plazo-fijo/design-system.html" target="_blank" rel="noopener" data-es="Ver el mini design system ↗">See the mini design system ↗</a></p>
+      </div>
+    </section>
+
+    <section class="cs-section cs-section--tint ed-section" id="prototype">
+      <div class="cs-wrap reveal">
+        <h2 class="ed-h2" data-es="Prototipo.">Prototype.</h2>
+        <p class="ed-sub" data-es="Las 15 pantallas, navegables, con los números recalculándose en vivo. Está en español, como la app.">All 15 screens, clickable, with the numbers updating live. It’s in Spanish, like the app.</p>
+        <div class="cs-proto"><iframe src="assets/plazo-fijo/prototipo.html" title="Interactive prototype of the agentic term deposits" data-es-a-title="Prototipo interactivo de los plazos fijos con agente" loading="lazy"></iframe></div>
+        <p class="cs-proto__open"><a href="assets/plazo-fijo/prototipo.html" target="_blank" rel="noopener" data-es="Abrir el prototipo en pantalla completa ↗">Open the prototype full screen ↗</a></p>
+      </div>
+    </section>
+
+    <section class="ed-band" id="outcomes">
+      <div class="cs-wrap reveal">
+        <p class="ed-label" data-es="Qué podría refutarlo">What could prove me wrong</p>
+        <h2 class="ed-h2" data-es="Una prueba de concepto, <span class='accent'>lista para testear.</span>">A proof of concept, <span class="accent">ready to test.</span></h2>
+        <p class="ed-band__intro" data-es="No se construyó ni se midió nada todavía. Así lo validaría.">Nothing was built or measured yet. This is how I would validate it.</p>
+        <div class="ed-band__cols">
+          <ol class="ed-band__list ed-band__list--plain">
+            <li><b><span data-es="Flujo guiado contra agente">Guided flow versus agent</span></b><span data-es="¿Con cuál la gente decide más rápido y con más seguridad?">Which one helps people decide faster and with more confidence?</span></li>
+            <li><b><span data-es="¿Qué nivel eligen?">Which level do people pick?</span></b><span data-es="Si la mayoría se queda en “Avisame”, la confianza todavía no está.">If most stay on “Just notify me”, the trust isn’t there yet.</span></li>
+          </ol>
+          <ol class="ed-band__list ed-band__list--plain">
+            <li><b><span data-es="¿Se entiende la sugerencia?">Is the suggestion clear?</span></b><span data-es="Que puedan explicar cuándo cobran y diferenciar capital de intereses.">Can people explain when they get paid, and tell capital from interest?</span></li>
+            <li><b><span data-es="Control y salida">Control and exit</span></b><span data-es="Que puedan pausar, cambiar o decir que no sin sentir presión.">Can they pause, change or say no without feeling pressured?</span></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-next">
+      <div class="cs-wrap cs-next__row">
+        <div>
+          <p class="cs-next__label" data-es="Próximo caso">Next case</p>
+          <a class="cs-next__link" href="panda.html">Panda <i aria-hidden="true">→</i></a>
+          <p class="cs-next__desc" data-es="El rediseño de la app de una clínica veterinaria, en proceso">Redesigning a veterinary clinic’s app, in progress</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-live">
+      <div class="footer-item">
+        <span class="footer-label" data-es="Hora local">Local time</span>
+        <span><time class="js-clock">--:--</time> <span data-es="en Buenos Aires">in Buenos Aires</span></span>
+      </div>
+      <div class="footer-item">
+        <span class="footer-label" data-es="Ahora">Currently</span>
+        <span data-es="Sacando fotos con una Fujifilm X-S10 · Leyendo <em>Distancia de rescate</em>, de Samanta Schweblin">Shooting with a Fujifilm X-S10 · Reading <em>Distancia de rescate</em> by Samanta Schweblin</span>
+      </div>
+      <figure class="footer-shot">
+        <a href="assets/other/ultima-foto.jpg" target="_blank" rel="noopener" aria-label="See the full photo" data-es-a-aria-label="Ver la foto completa">
+          <img src="assets/other/ultima-foto-thumb.jpg" alt="A stone bench under the trees, in soft afternoon light" data-es-a-alt="Un banco de piedra bajo los árboles, con luz suave de la tarde" width="64" height="64" loading="lazy">
+        </a>
+        <figcaption>
+          <span class="footer-label" data-es="Última foto">Last shot</span>
+          <span data-es="San Antonio de Areco, Buenos Aires · Marzo 2026">San Antonio de Areco, Buenos Aires · March 2026</span>
+        </figcaption>
+      </figure>
+    </div>
+    <div class="wrap footer-bottom">
+      <span>© 2026 Lala</span>
+      <span class="footer-hint" data-es="Psst… apretá <kbd>G</kbd>">Psst… press <kbd>G</kbd></span>
+      <span class="footer-links"><a href="https://www.linkedin.com/in/lalapicorosoux/" target="_blank" rel="noopener">LinkedIn ↗</a><a href="mailto:lalapicoroso@gmail.com">lalapicoroso@gmail.com</a></span>
+    </div>
+  </footer>
+
+  <nav class="pill" aria-label="Main" data-es-a-aria-label="Principal">
+    <a href="index.html" data-es="Inicio">Home</a>
+    <a href="index.html#work" aria-current="true" data-es="Trabajo">Work</a>
+    <a href="index.html#about" data-es="Sobre mí">About</a>
+    <a href="index.html#contacto" data-es="Contacto">Contact</a>
+    <button class="theme-toggle theme-toggle--icon" type="button" aria-label="Switch to dark mode">
+      <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+      <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    </button>
+  </nav>
+
+</body>
+</html>

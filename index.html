@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-es="Lala · Senior Product Designer">Lala · Senior Product Designer</title>
+  <meta name="description" content="Lala, Senior Product Designer in Buenos Aires. I like the messy part — and finding the questions that matter." data-es-a-content="Lala, Senior Product Designer en Buenos Aires. Me gusta la parte desprolija — y encontrar las preguntas que importan.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Lala Picoroso · Senior Product Designer">
+  <meta property="og:title" content="Lala · Senior Product Designer">
+  <meta property="og:description" content="Lala, Senior Product Designer in Buenos Aires. I like the messy part — and finding the questions that matter.">
+  <meta property="og:url" content="https://lalapicoroso.github.io/">
+  <meta property="og:image" content="https://lalapicoroso.github.io/assets/og/home.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Geist:wght@300..600&family=Inter+Tight:wght@400..500&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css?v=20261109-19">
+  <script src="js/theme.js?v=20261109-19"></script>
+  <script src="js/i18n.js?v=20261109-19"></script>
+  <script src="js/transition.js?v=20261109-19"></script>
+  <script src="js/intro.js?v=20261109-19"></script>
+  <script src="js/motion.js?v=20261109-19" defer></script>
+  <script src="js/gallery.js?v=20261109-19" defer></script>
+  <script src="js/thread.js?v=20261109-19" defer></script>
+</head>
+<body class="has-pill">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="#top" class="logo" aria-label="Home" data-es-a-aria-label="Inicio">LP</a>
+      <span class="status" data-es="Buenos Aires · Disponible">Buenos Aires · Available</span>
+      <button class="lang-toggle" type="button" aria-label="Ver en español" data-es-a-aria-label="View in English"><span lang="en">EN</span><i aria-hidden="true">/</i><span lang="es">ES</span></button>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero" id="top">
+      <div class="wrap hero__grid">
+        <div class="hero__copy">
+          <p class="hero__intro" data-es="¡Hola! <b>Soy Lala</b> <span>· Senior Product Designer</span>">Hi! <b>I'm Lala</b> <span>· Senior Product Designer</span></p>
+          <h1 class="display display--xl">
+            <span data-es="Convierto problemas complejos en">Turning complex<br> problems into</span> <span class="rotator" data-rotate="strategy|design|research|systems" data-es-a-data-rotate="estrategia|diseño|investigación|sistemas" aria-hidden="true"><span class="rotator__text">systems</span></span><span class="sr-only" data-es="sistemas">systems</span>
+          </h1>
+          <p class="lead" data-es="Me gusta la parte desprolija: flujos enredados, requisitos que compiten entre sí, ideas a medio formar. Mi trabajo es encontrar las preguntas que importan y responderlas con algo que la gente use sin pensarlo dos veces.">
+            I like the messy part: tangled workflows, competing requirements, half-formed ideas. My job is to find the questions that matter and answer them with something people use without thinking twice.
+          </p>
+        </div>
+      </div>
+      <div class="wrap hero__foot">
+        <!-- Madeja que se desenreda y termina siendo esta línea (js/thread.js) -->
+        <svg class="hero__thread" aria-hidden="true" focusable="false"><polyline/></svg>
+        <a class="hero__scroll" href="#work" aria-label="Scroll to projects" data-es-a-aria-label="Ir a los proyectos"><span class="hero__arrow" aria-hidden="true">↓</span></a>
+      </div>
+    </section>
+
+    <section class="section" id="work">
+      <div class="wrap">
+        <div class="section__head reveal">
+          <h2 class="display display--l" data-es="<span class='accent'>Proyectos</span> recientes">Recent <span class="accent">projects</span></h2>
+        </div>
+
+        <div class="work-featured">
+          <a class="feature reveal" id="dialpad" href="dialpad.html">
+            <div class="feature__media cover-media" style="--stage: #ece8f7">
+              <img src="assets/dialpad/hero-ipads.jpg" alt="" loading="lazy">
+            </div>
+            <div class="feature__info">
+              <p class="meta">2023</p>
+              <h3 class="feature__title">Dialpad</h3>
+              <p class="feature__desc" data-es="Comunicación potenciada con IA, a escala">AI-powered communication at scale</p>
+              <ul class="chips"><li data-es="IA">AI</li><li data-es="Mobile">Mobile</li></ul>
+              <span class="case__arrow" aria-hidden="true">↗</span>
+            </div>
+          </a>
+          <a class="feature reveal" id="yuda" href="yuda.html">
+            <div class="feature__media cover-media cover-media--pad" style="--stage: #d0dcf3">
+              <img src="assets/yuda/hero-phones.webp" alt="" loading="lazy">
+            </div>
+            <div class="feature__info">
+              <p class="meta">2025</p>
+              <h3 class="feature__title">Yuda</h3>
+              <p class="feature__desc" data-es="Una plataforma mobile que conecta a usuarios con profesionales verificados de servicios para el hogar">A mobile platform connecting users with verified home service professionals</p>
+              <ul class="chips"><li data-es="Marketplace">Marketplace</li><li data-es="Investigación">Research</li></ul>
+              <span class="case__arrow" aria-hidden="true">↗</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Grilla de 3 por fila. Para sumar un proyecto, copiá un bloque .tile (como <a href="pagina.html">) -->
+        <div class="work-grid3">
+          <a class="tile reveal" id="kavak" href="kavak.html">
+            <div class="tile__media cover-media" style="--stage: #618dd8"><img src="assets/kavak/hero-phones.jpg" alt="" loading="lazy"></div>
+            <div class="tile__info">
+              <p class="meta">2022</p>
+              <h3 class="tile__title">Kavak Capital</h3>
+              <p class="tile__desc" data-es="Nueva sección de autogestión para un unicornio fintech">New self-management section for a fintech unicorn</p>
+              <ul class="chips"><li data-es="Fintech">Fintech</li><li data-es="Investigación">Research</li></ul>
+              <span class="case__arrow" aria-hidden="true">↗</span>
+            </div>
+          </a>
+          <a class="tile reveal" id="plei" href="plei.html">
+            <div class="tile__media cover-media" style="--stage: #d7e7e3"><img src="assets/plei/hero-tablet.jpg" alt="" loading="lazy"></div>
+            <div class="tile__info">
+              <p class="meta">2024</p>
+              <h3 class="tile__title">Plei</h3>
+              <p class="tile__desc" data-es="Dashboard B2B para que los complejos deportivos gestionen partidos, check-ins y la operación diaria">B2B dashboard to help facilities manage games, check-ins, and daily operations</p>
+              <ul class="chips"><li data-es="B2B">B2B</li><li data-es="Dashboard">Dashboard</li></ul>
+              <span class="case__arrow" aria-hidden="true">↗</span>
+            </div>
+          </a>
+          <a class="tile reveal" id="plazo-fijo" href="plazo-fijo.html">
+            <div class="tile__media cover-media" style="--stage: #ece7ff"><img src="assets/plazo-fijo/cover-home.jpg" alt="" loading="lazy"></div>
+            <div class="tile__info">
+              <p class="meta" data-es="2026 · Prueba de concepto">2026 · Proof of concept</p>
+              <h3 class="tile__title" data-es="Plazos fijos con agente">Agentic term deposits</h3>
+              <p class="tile__desc" data-es="Un agente que sugiere cuánto dinero separar y por cuánto tiempo, para uno de los bancos más grandes de Argentina">An agent that suggests how much money to set aside and for how long, for one of Argentina’s largest banks</p>
+              <ul class="chips"><li>Fintech</li><li data-es="UX agéntica">Agentic UX</li></ul>
+              <span class="case__arrow" aria-hidden="true">↗</span>
+            </div>
+          </a>
+          <a class="tile reveal" id="panda" href="panda.html">
+            <div class="tile__media cover-media" style="--stage: #e1eadf"><img src="assets/panda/cover-home.jpg" alt="" loading="lazy"></div>
+            <div class="tile__info">
+              <p class="meta" data-es="2026 · En proceso">2026 · Work in progress</p>
+              <h3 class="tile__title">Panda</h3>
+              <p class="tile__desc" data-es="El rediseño de la app de una clínica veterinaria: nueva identidad, design system y todos los flujos para tutores">Redesigning a veterinary clinic’s app: a new look and feel, a design system and every flow for pet owners</p>
+              <ul class="chips"><li data-es="Salud animal">Pet health</li><li data-es="Design system">Design system</li></ul>
+              <span class="case__arrow" aria-hidden="true">↗</span>
+            </div>
+          </a>
+
+          <a class="tile reveal" id="shiftmed" href="shiftmed.html">
+            <div class="tile__media cover-media" style="--stage: #f0e9f0"><img src="assets/shiftmed/hero-v2.jpg" alt="" loading="lazy"></div>
+            <div class="tile__info">
+              <p class="meta">2021</p>
+              <h3 class="tile__title">ShiftMed</h3>
+              <p class="tile__desc" data-es="Credenciales que se pueden terminar y cobro en el día, para una app de staffing de salud">A credentialing flow people can finish, and same-day pay, for a healthcare staffing app</p>
+              <ul class="chips"><li data-es="Salud">Healthcare</li><li data-es="Mobile">Mobile</li></ul>
+              <span class="case__arrow" aria-hidden="true">↗</span>
+            </div>
+          </a>        </div>
+      </div>
+    </section>
+
+    <section class="section" id="capacidades">
+      <div class="wrap">
+        <div class="section__head reveal">
+          <h2 class="display display--l" data-es="Lo que <span class='accent'>mejor</span> hago">What I do <span class="accent">best</span></h2>
+        </div>
+        <!-- Acordeón: cada fila se despliega. Para editar, cambiá el texto en inglés y su data-es. -->
+        <ul class="acc">
+          <li class="acc__item reveal is-open">
+            <h3 class="acc__head">
+              <button class="acc__btn" type="button" aria-expanded="true" aria-controls="acc-1">
+                <span class="acc__num">01</span>
+                <span class="acc__title" data-es="Estrategia de producto">Product strategy</span>
+                <span class="acc__icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="acc__panel" id="acc-1">
+              <div class="acc__inner">
+                <div class="acc__body">
+                  <p class="acc__desc" data-es="Encontrar el problema correcto antes de diseñar: objetivos de negocio, restricciones técnicas y lo que la gente realmente necesita — del discovery a un roadmap en el que el equipo cree.">Framing the right problem before designing anything: business goals, technical constraints and what people actually need — from discovery to a roadmap the team believes in.</p>
+                  <ul class="chips acc__chips"><li data-es="Discovery">Discovery</li><li data-es="Definición del problema">Problem framing</li><li data-es="Priorización">Prioritization</li><li data-es="Workshops y co-creación">Workshops & co-creation</li><li data-es="Métricas de éxito">Success metrics</li><li data-es="Alineación con stakeholders">Stakeholder alignment</li></ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="acc__item reveal">
+            <h3 class="acc__head">
+              <button class="acc__btn" type="button" aria-expanded="false" aria-controls="acc-2">
+                <span class="acc__num">02</span>
+                <span class="acc__title" data-es="Diseño de productos con IA">AI product design</span>
+                <span class="acc__icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="acc__panel" id="acc-2">
+              <div class="acc__inner">
+                <div class="acc__body">
+                  <p class="acc__desc" data-es="Diseñar funcionalidades de IA en las que la gente confíe: cuándo la IA tiene que actuar, cuándo quedarse callada y cómo se explica. En Dialpad, la transcripción en tiempo real y los resúmenes con IA llegaron a más de 100K usuarios.">Designing AI features people trust: when AI should act, when it should stay silent, and how it explains itself. At Dialpad, real-time transcription and AI summaries reached 100K+ users.</p>
+                  <ul class="chips acc__chips"><li data-es="Interacción humano-IA">Human-AI interaction</li><li data-es="Confianza y transparencia">Trust & transparency</li><li data-es="Resúmenes e insights con IA">AI summaries & insights</li><li data-es="Estados de incertidumbre y error">Uncertainty & error states</li><li data-es="Diseño de prompts">Prompt design</li><li data-es="Capacidades y límites de los LLM">LLM capabilities & limits</li></ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="acc__item reveal">
+            <h3 class="acc__head">
+              <button class="acc__btn" type="button" aria-expanded="false" aria-controls="acc-3">
+                <span class="acc__num">03</span>
+                <span class="acc__title" data-es="UX agéntica">Agentic UX</span>
+                <span class="acc__icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="acc__panel" id="acc-3">
+              <div class="acc__inner">
+                <div class="acc__body">
+                  <p class="acc__desc" data-es="Interfaces para IA que actúa en nombre de las personas: mostrar el plan y el progreso, pedir permiso en el momento justo y mantener el control humano con revisión, deshacer y traspasos claros.">Interfaces for AI that takes action on people's behalf: showing the plan and the progress, asking for permission at the right moment, and keeping humans in control with review, undo and clear handoffs.</p>
+                  <ul class="chips acc__chips"><li data-es="Flujos con agentes">Agent workflows</li><li data-es="Humano en el circuito">Human in the loop</li><li data-es="Permisos y confirmaciones">Permissions & confirmations</li><li data-es="Progreso y estado">Progress & status</li><li data-es="Deshacer y recuperación">Undo & recovery</li><li data-es="Flujos asistidos por IA">AI-assisted workflows</li></ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="acc__item reveal">
+            <h3 class="acc__head">
+              <button class="acc__btn" type="button" aria-expanded="false" aria-controls="acc-4">
+                <span class="acc__num">04</span>
+                <span class="acc__title" data-es="Design systems">Design systems</span>
+                <span class="acc__icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="acc__panel" id="acc-4">
+              <div class="acc__inner">
+                <div class="acc__body">
+                  <p class="acc__desc" data-es="Sistemas que escalan entre equipos y plataformas — creados desde cero en Yuda y Plei, y haciendo crecer los existentes en Dialpad y Kavak. Documentados, accesibles y listos para ingeniería.">Systems that scale across teams and platforms — built from scratch at Yuda and Plei, grown inside existing ones at Dialpad and Kavak. Documented, accessible and ready for engineering.</p>
+                  <ul class="chips acc__chips"><li data-es="Tokens y variables">Tokens & variables</li><li data-es="Librerías de componentes">Component libraries</li><li data-es="Documentación">Documentation</li><li data-es="Accesibilidad (WCAG)">Accessibility (WCAG)</li><li data-es="Figma">Figma</li><li data-es="Handoff a desarrollo">Dev handoff</li></ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="acc__item reveal">
+            <h3 class="acc__head">
+              <button class="acc__btn" type="button" aria-expanded="false" aria-controls="acc-5">
+                <span class="acc__num">05</span>
+                <span class="acc__title" data-es="Investigación y prototipado">Research & prototyping</span>
+                <span class="acc__icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="acc__panel" id="acc-5">
+              <div class="acc__inner">
+                <div class="acc__body">
+                  <p class="acc__desc" data-es="De entrevistas y tests de usabilidad a prototipos en alta fidelidad — usando IA para sintetizar hallazgos más rápido y llevar las ideas antes a las personas.">From interviews and usability tests to high-fidelity prototypes — using AI to synthesize findings faster and put ideas in front of people sooner.</p>
+                  <ul class="chips acc__chips"><li data-es="Entrevistas">User interviews</li><li data-es="Tests de usabilidad">Usability testing</li><li data-es="Síntesis">Synthesis</li><li data-es="Diseño de interacción">Interaction design</li><li data-es="Prototipado rápido">Rapid prototyping</li><li data-es="Prototipado asistido por IA">AI-assisted prototyping</li></ul>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section--raised" id="about">
+      <div class="wrap">
+        <div class="ab-grid">
+          <div class="ab-main">
+            <h2 class="display display--l" data-es="Los mejores productos parecen&nbsp;obvios.<br> Llegar ahí <span class='accent'>casi&nbsp;nunca lo&nbsp;es.</span>">The best products feel&nbsp;obvious.<br> Getting there <span class="accent">rarely&nbsp;is.</span></h2>
+            <div class="ab-bio reveal">
+              <p data-es="Hace más de 9 años que diseño productos que la gente usa todos los días — en fintech, salud, marketplaces, delivery y comunicación con IA — para empresas como <strong>Dialpad, Kavak, PedidosYa y McKesson</strong>.">For 9+ years I've designed products people rely on every day — in fintech, healthcare, marketplaces, food delivery and AI-powered communication — for companies like <strong>Dialpad, Kavak, PedidosYa and McKesson</strong>.</p>
+              <p data-es="Mi trabajo empieza antes de las pantallas: investigación, estrategia y muchas conversaciones con usuarios, PMs e ingeniería. Después simplifico, prototipo y testeo hasta que aparece la respuesta obvia.">My work starts before the screens: research, strategy and a lot of conversations with users, PMs and engineers. Then I simplify, prototype and test until the obvious answer shows up.</p>
+              <p data-es="Fuera del producto, casi siempre estoy detrás de una cámara — entrena el mismo músculo: notar lo que importa y recortar el resto.">Outside of product, I'm usually behind a camera — it trains the same muscle: noticing what matters and cutting the rest.</p>
+            </div>
+            <p class="ab-statement reveal" data-es="Uso IA todos los días para <mark class='hl'>investigar, explorar y prototipar más rápido</mark> — así puedo dedicarle más tiempo a donde de verdad pasa el diseño: con las personas, y en las decisiones.">I use AI every day to <mark class="hl">research, explore and prototype faster</mark> — so I can spend more time where design really happens: with people, and on the decisions.</p>
+          </div>
+          <aside class="ab-side reveal">
+            <div class="ab-block">
+              <p class="ab-label" data-es="Herramientas de diseño e IA">Design &amp; AI tools</p>
+              <ul class="chips ab-chips"><li data-es="Figma">Figma</li><li data-es="Figma Make">Figma Make</li><li data-es="Claude">Claude</li><li data-es="Claude Code">Claude Code</li><li data-es="ChatGPT">ChatGPT</li><li data-es="Cursor">Cursor</li></ul>
+            </div>
+            <div class="ab-block">
+              <p class="ab-label" data-es="Herramientas de producto">Product tools</p>
+              <ul class="chips ab-chips"><li data-es="Jira">Jira</li><li data-es="Notion">Notion</li><li data-es="Miro">Miro</li><li data-es="Amplitude">Amplitude</li><li data-es="Braze">Braze</li></ul>
+            </div>
+            <div class="ab-block">
+              <p class="ab-label" data-es="Idiomas">Languages</p>
+              <p class="ab-text" data-es="Español (nativo) · Inglés (C2) · Italiano (B2)">Spanish (native) · English (C2) · Italian (B2)</p>
+            </div>
+            <div class="ab-block">
+              <p class="ab-label" data-es="Formación">Education</p>
+              <p class="ab-text" data-es="Diseño Gráfico, Universidad de Buenos Aires">Graphic Design, Universidad de Buenos Aires</p>
+            </div>
+            <div class="ab-links">
+              <a class="ab-link" href="https://www.linkedin.com/in/lalapicorosoux/" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a>
+              <a class="ab-link" href="assets/Laura-Picoroso-CV.pdf" download="Laura Picoroso CV.pdf" data-es="Descargar CV <span aria-hidden='true'>↓</span>">Download CV <span aria-hidden="true">↓</span></a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="ai">
+      <div class="wrap">
+        <div class="section__head reveal">
+          <h2 class="display display--l" data-es="Dónde me ayuda la IA, <span class='accent'>y qué nunca delego.</span>">Where AI helps, <span class="accent">and what I never delegate.</span></h2>
+        </div>
+        <p class="lead aip__lead reveal" data-es="La IA se ocupa del trabajo repetitivo y que lleva tiempo. El pensamiento, las conversaciones y el criterio siguen siendo míos.">AI takes the repetitive, time-consuming work off my plate. The thinking, the conversations and the judgment stay with me.</p>
+        <div class="aip">
+          <div class="aip__step reveal">
+            <p class="aip__num">01</p>
+            <h3 class="aip__name" data-es="Descubrir">Discover</h3>
+            <p class="aip__label" data-es="La IA me ayuda con">AI helps with</p>
+            <ul class="aip__list"><li data-es="Relevar competidores y patrones">Competitor and pattern scans</li><li data-es="Resumir notas de entrevistas">Summarizing interview notes</li><li data-es="Borradores de guías de investigación">Drafting research guides</li></ul>
+            <p class="aip__label aip__label--own" data-es="Lo hago yo">I own</p>
+            <p class="aip__own" data-es="Hablar con los usuarios y decidir qué importa de verdad.">Talking to users, and deciding what really matters.</p>
+          </div>
+          <div class="aip__step reveal">
+            <p class="aip__num">02</p>
+            <h3 class="aip__name" data-es="Definir">Define</h3>
+            <p class="aip__label" data-es="La IA me ayuda con">AI helps with</p>
+            <ul class="aip__list"><li data-es="Agrupar insights">Clustering insights</li><li data-es="Borradores de problemas e hipótesis">Drafting problem statements and hypotheses</li><li data-es="Poner a prueba los supuestos">Pressure-testing assumptions</li></ul>
+            <p class="aip__label aip__label--own" data-es="Lo hago yo">I own</p>
+            <p class="aip__own" data-es="Definir el problema y priorizar con el equipo.">Framing the problem and prioritizing with the team.</p>
+          </div>
+          <div class="aip__step reveal">
+            <p class="aip__num">03</p>
+            <h3 class="aip__name" data-es="Diseñar">Design</h3>
+            <p class="aip__label" data-es="La IA me ayuda con">AI helps with</p>
+            <ul class="aip__list"><li data-es="Explorar muchas variantes rápido">Exploring many variations fast</li><li data-es="Borradores de UX writing">UX writing drafts</li><li data-es="Prototipos rápidos con Figma Make y Claude Code">Quick prototypes with Figma Make and Claude Code</li></ul>
+            <p class="aip__label aip__label--own" data-es="Lo hago yo">I own</p>
+            <p class="aip__own" data-es="Las decisiones de interacción, los detalles y la última palabra sobre la calidad.">Interaction decisions, the details, and the final call on quality.</p>
+          </div>
+          <div class="aip__step reveal">
+            <p class="aip__num">04</p>
+            <h3 class="aip__name" data-es="Entregar">Deliver</h3>
+            <p class="aip__label" data-es="La IA me ayuda con">AI helps with</p>
+            <ul class="aip__list"><li data-es="Specs y documentación">Specs and documentation</li><li data-es="Casos borde y estados vacíos">Edge cases and empty states</li><li data-es="Checklists de QA">QA checklists</li></ul>
+            <p class="aip__label aip__label--own" data-es="Lo hago yo">I own</p>
+            <p class="aip__own" data-es="Las conversaciones con ingeniería, y lo que sale a producción.">The conversations with engineering, and what ships.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--raised" id="experience">
+      <div class="wrap">
+        <div class="section__head reveal">
+          <h2 class="display display--l" data-es="Más de 9 años <span class='accent'>en producto.</span>">9+ years <span class="accent">in product.</span></h2>
+        </div>
+        <ul class="xp">
+          <li class="xp__row reveal">
+            <div class="xp__when">
+              <p class="xp__dates" data-es="Mar 2026 – Hoy">Mar 2026 – Present</p>
+              <p class="xp__co">Swiss Medical · Huma</p>
+              <p class="xp__mode">Freelance</p>
+            </div>
+            <div class="xp__what">
+              <h3 class="xp__role" data-es="Product Strategy &amp; Design Consultant">Product Strategy &amp; Design Consultant</h3>
+              <p class="xp__desc" data-es="Experiencias digitales para Swiss Medical, uno de los principales grupos de salud privada de Argentina, y estrategia de producto y diseño con Huma, una consultora de product strategy.">Digital experiences for Swiss Medical, one of Argentina’s leading private healthcare groups, and product strategy and design with Huma, a product strategy consultancy.</p>
+              <ul class="chips xp__tags"><li data-es="Salud">Healthcare</li><li data-es="Estrategia de producto">Product strategy</li><li data-es="Consultoría">Consulting</li></ul>
+            </div>
+          </li>
+          <li class="xp__row reveal">
+            <div class="xp__when">
+              <p class="xp__dates" data-es="Feb 2025 – Mar 2026">Feb 2025 – Mar 2026</p>
+              <p class="xp__co">itti</p>
+              <p class="xp__mode" data-es="Híbrido">Hybrid</p>
+            </div>
+            <div class="xp__what">
+              <h3 class="xp__role" data-es="Lead Product Designer">Lead Product Designer</h3>
+              <p class="xp__desc" data-es="Lideré Yuda, un marketplace de servicios para el hogar de dos lados, del concepto al MVP — incluido su design system y la investigación de campo en Asunción.">Led Yuda, a two-sided home services marketplace, from concept to MVP — including its design system and field research in Asunción.</p>
+              <ul class="chips xp__tags"><li data-es="Marketplace">Marketplace</li><li data-es="Design system">Design system</li><li data-es="Diseño asistido por IA">AI-assisted design</li></ul>
+              <a class="xp__case" href="yuda.html" data-es="Ver el caso de Yuda →">See the Yuda case →</a>
+            </div>
+          </li>
+          <li class="xp__row reveal">
+            <div class="xp__when">
+              <p class="xp__dates" data-es="Jun 2024 – Ene 2025">Jun 2024 – Jan 2025</p>
+              <p class="xp__co">Plei</p>
+              <p class="xp__mode" data-es="Remoto · Contrato">Remote · Contract</p>
+            </div>
+            <div class="xp__what">
+              <h3 class="xp__role" data-es="Senior Product Designer">Senior Product Designer</h3>
+              <p class="xp__desc" data-es="Rediseñé los recorridos principales de un marketplace deportivo y diseñé un nuevo dashboard para los complejos. Facilité un workshop de gamificación que encontró más de 30 oportunidades.">Redesigned core journeys of a sports marketplace and designed a new dashboard for facility managers. Ran a gamification workshop that surfaced 30+ opportunities.</p>
+              <ul class="chips xp__tags"><li data-es="Sports-tech">Sports-tech</li><li data-es="B2B">B2B</li><li data-es="Gamificación">Gamification</li></ul>
+              <a class="xp__case" href="plei.html" data-es="Ver el caso de Plei →">See the Plei case →</a>
+            </div>
+          </li>
+          <li class="xp__row reveal">
+            <div class="xp__when">
+              <p class="xp__dates" data-es="Dic 2023 – May 2024">Dec 2023 – May 2024</p>
+              <p class="xp__co">McKesson / Ontada</p>
+              <p class="xp__mode" data-es="Remoto · Contrato">Remote · Contract</p>
+            </div>
+            <div class="xp__what">
+              <h3 class="xp__role" data-es="Senior Product Designer">Senior Product Designer</h3>
+              <p class="xp__desc" data-es="Flujos de SaaS empresarial para equipos de oncología: reportes con muchos datos y autorizaciones de seguros, validados con personal clínico.">Enterprise SaaS workflows for oncology care teams: data-heavy reporting and insurance authorizations, validated with clinical staff.</p>
+              <ul class="chips xp__tags"><li data-es="Salud">Healthcare</li><li data-es="SaaS empresarial">Enterprise SaaS</li><li data-es="Estudios de usabilidad">Usability studies</li></ul>
+              
+            </div>
+          </li>
+          <li class="xp__row reveal">
+            <div class="xp__when">
+              <p class="xp__dates" data-es="Feb 2023 – Oct 2023">Feb 2023 – Oct 2023</p>
+              <p class="xp__co">Dialpad</p>
+              <p class="xp__mode" data-es="Remoto">Remote</p>
+            </div>
+            <div class="xp__what">
+              <h3 class="xp__role" data-es="Senior Product Designer">Senior Product Designer</h3>
+              <p class="xp__desc" data-es="Funcionalidades con IA para mobile y desktop, la app de iPad y las bases del design system mobile.">AI-powered features for mobile and desktop, the iPad app, and mobile design system foundations.</p>
+              <ul class="chips xp__tags"><li data-es="IA">AI</li><li data-es="UX conversacional">Conversational UX</li><li data-es="Design tokens">Design tokens</li></ul>
+              <a class="xp__case" href="dialpad.html" data-es="Ver el caso de Dialpad →">See the Dialpad case →</a>
+            </div>
+          </li>
+          <li class="xp__row reveal">
+            <div class="xp__when">
+              <p class="xp__dates" data-es="Nov 2021 – Feb 2023">Nov 2021 – Feb 2023</p>
+              <p class="xp__co">Kavak</p>
+              <p class="xp__mode" data-es="Híbrido">Hybrid</p>
+            </div>
+            <div class="xp__what">
+              <h3 class="xp__role" data-es="Senior Product Designer">Senior Product Designer</h3>
+              <p class="xp__desc" data-es="Experiencia de autogestión para Kavak Capital, validada con 16 entrevistas y tests de usabilidad en Ciudad de México.">Self-service experience for Kavak Capital, validated with 16 interviews and usability tests in Mexico City.</p>
+              <ul class="chips xp__tags"><li data-es="Fintech">Fintech</li><li data-es="Investigación">Research</li><li data-es="Workshops">Workshops</li></ul>
+              <a class="xp__case" href="kavak.html" data-es="Ver el caso de Kavak Capital →">See the Kavak Capital case →</a>
+            </div>
+          </li>
+          <li class="xp__row reveal">
+            <div class="xp__when">
+              <p class="xp__dates">2021</p>
+              <p class="xp__co">ShiftMed</p>
+              <p class="xp__mode">Freelance</p>
+            </div>
+            <div class="xp__what">
+              <h3 class="xp__role" data-es="Lead Product Designer">Lead Product Designer</h3>
+              <p class="xp__desc" data-es="Rediseño de la app mobile para profesionales de la salud: un flujo de credenciales más simple e Instant Pay, para cobrar en el día.">Redesign of the mobile app for healthcare workers: a simpler credentialing flow and Instant Pay, for same-day pay.</p>
+              <ul class="chips xp__tags"><li data-es="Salud">Healthcare</li><li data-es="Mobile">Mobile</li><li data-es="Pagos">Payments</li></ul>
+              <a class="xp__case" href="shiftmed.html" data-es="Ver el caso de ShiftMed →">See the ShiftMed case →</a>
+            </div>
+          </li>
+          <li class="xp__row reveal">
+            <div class="xp__when">
+              <p class="xp__dates" data-es="Oct 2020 – Oct 2021">Oct 2020 – Oct 2021</p>
+              <p class="xp__co">PedidosYa</p>
+              <p class="xp__mode" data-es="Híbrido">Hybrid</p>
+            </div>
+            <div class="xp__what">
+              <h3 class="xp__role" data-es="Senior Product Designer">Senior Product Designer</h3>
+              <p class="xp__desc" data-es="Una plataforma B2B detrás de un acuerdo de USD 280K mensuales, experiencias de pagos y billetera, y un nuevo Vendor Portal.">A B2B platform behind a USD 280K monthly agreement, payment and wallet experiences, and a new Vendor Portal.</p>
+              <ul class="chips xp__tags"><li data-es="B2B">B2B</li><li data-es="Pagos">Payments</li><li data-es="Portal de vendedores">Vendor portal</li></ul>
+              
+            </div>
+          </li>
+          <li class="xp__row reveal">
+            <div class="xp__when">
+              <p class="xp__dates" data-es="Jun 2019 – Oct 2020">Jun 2019 – Oct 2020</p>
+              <p class="xp__co">iúnigo</p>
+              <p class="xp__mode" data-es="Presencial">On-site</p>
+            </div>
+            <div class="xp__what">
+              <h3 class="xp__role" data-es="Senior Product Designer">Senior Product Designer</h3>
+              <p class="xp__desc" data-es="Diseñé un nuevo producto de seguro de caución que abrió una nueva unidad de negocio y un nuevo segmento de clientes.">Designed a new rent-insurance product that opened a new business division and customer segment.</p>
+              <ul class="chips xp__tags"><li data-es="Insurtech">Insurtech</li><li data-es="Discovery">Discovery</li><li data-es="A/B testing">A/B testing</li></ul>
+              
+            </div>
+          </li>
+          <li class="xp__row xp__row--early reveal">
+            <div class="xp__when">
+              <p class="xp__dates" data-es="2017 – 2019">2017 – 2019</p>
+              <p class="xp__co" data-es="Antes">Earlier</p>
+            </div>
+            <div class="xp__what">
+              <p class="xp__desc" data-es="<strong>Accenture</strong> — Semi-Senior UX Designer · <strong>Globant</strong> — Semi-Senior UX/UI Designer"><strong>Accenture</strong> — Semi-Senior UX Designer · <strong>Globant</strong> — Semi-Senior UX/UI Designer</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section--gallery" id="other">
+      <div class="wrap">
+        <div class="gallery-head reveal">
+          <div class="gallery-head__copy">
+            <h2 class="display display--l" data-es="Más allá del producto">Beyond product</h2>
+            <p class="lead" data-es="Cuando no estoy diseñando productos, estoy afuera con alguna de mis cámaras. La fotografía es lo que me mantiene curiosa: por la luz, la composición y el mundo que hay fuera de la pantalla.">
+              When I'm not designing products, I'm out with one of my cameras. Photography is how I stay curious about light, composition, and the world outside the screen.
+            </p>
+          </div>
+          <div class="gallery-controls">
+            <a class="btn btn--primary" href="other.html" data-es="Ver todo">View all</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carrusel (avanza solo y vuelve a empezar). Fotos en assets/other/photos: la versión chica va en src y la grande en data-full. Formatos: --portrait (4:5), --landscape (3:2), --square (1:1) -->
+      <div class="gallery reveal">
+        <button class="gallery-btn gallery-btn--prev" type="button" data-dir="-1" aria-label="Previous" data-es-a-aria-label="Anterior">←</button>
+        <button class="gallery-btn gallery-btn--next" type="button" data-dir="1" aria-label="Next" data-es-a-aria-label="Siguiente">→</button>
+        <ul class="gallery__track" tabindex="0" aria-label="Photos and printed work" data-es-a-aria-label="Fotos e impresos">
+        <li class="gallery__item gallery__item--portrait">
+          <button class="gallery__open" type="button" aria-label="Open image 1" data-es-a-aria-label="Abrir imagen 1">
+            <img class="gallery__media" src="assets/other/photos/01-pasadizo.jpg" data-full="assets/other/photos/01-pasadizo-full.jpg" alt="A dark passageway opening onto a lit street with balconies" data-es-a-alt="Un pasadizo oscuro que se abre a una calle iluminada con balcones" loading="lazy">
+          </button>
+          <p class="gallery__caption"><b data-es="Costa Amalfitana, Italia">Amalfi Coast, Italy</b><span data-es="Película 35 mm">35mm film</span></p>
+        </li>
+        <li class="gallery__item gallery__item--landscape">
+          <button class="gallery__open" type="button" aria-label="Open image 2" data-es-a-aria-label="Abrir imagen 2">
+            <img class="gallery__media" src="assets/other/photos/02-positano.jpg" data-full="assets/other/photos/02-positano-full.jpg" alt="Positano's houses climbing the cliff above a crowded beach and boats" data-es-a-alt="Las casas de Positano trepando el acantilado sobre una playa llena y botes" loading="lazy">
+          </button>
+          <p class="gallery__caption"><b data-es="Positano, Italia">Positano, Italy</b><span data-es="Película 35 mm">35mm film</span></p>
+        </li>
+        <li class="gallery__item gallery__item--portrait">
+          <button class="gallery__open" type="button" aria-label="Open image 3" data-es-a-aria-label="Abrir imagen 3">
+            <img class="gallery__media" src="assets/other/photos/03-florencia.jpg" data-full="assets/other/photos/03-florencia-full.jpg" alt="The Duomo of Florence rising above a crowded street" data-es-a-alt="El Duomo de Florencia elevándose sobre una calle llena de gente" loading="lazy">
+          </button>
+          <p class="gallery__caption"><b data-es="Florencia, Italia">Florence, Italy</b><span data-es="Película 35 mm">35mm film</span></p>
+        </li>
+        <li class="gallery__item gallery__item--landscape">
+          <button class="gallery__open" type="button" aria-label="Open image 4" data-es-a-aria-label="Abrir imagen 4">
+            <img class="gallery__media" src="assets/other/photos/04-acropolis.jpg" data-full="assets/other/photos/04-acropolis-full.jpg" alt="The Acropolis in the distance, framed by trees" data-es-a-alt="La Acrópolis a lo lejos, enmarcada por árboles" loading="lazy">
+          </button>
+          <p class="gallery__caption"><b data-es="Atenas, Grecia">Athens, Greece</b><span data-es="Película 35 mm">35mm film</span></p>
+        </li>
+        <li class="gallery__item gallery__item--portrait">
+          <button class="gallery__open" type="button" aria-label="Open image 5" data-es-a-aria-label="Abrir imagen 5">
+            <img class="gallery__media" src="assets/other/photos/05-barcelona-callejon.jpg" data-full="assets/other/photos/05-barcelona-callejon-full.jpg" alt="A narrow stone alley between tall buildings" data-es-a-alt="Un callejón angosto de piedra entre edificios altos" loading="lazy">
+          </button>
+          <p class="gallery__caption"><b data-es="Barcelona, España">Barcelona, Spain</b><span data-es="Película 35 mm">35mm film</span></p>
+        </li>
+        <li class="gallery__item gallery__item--landscape">
+          <button class="gallery__open" type="button" aria-label="Open image 6" data-es-a-aria-label="Abrir imagen 6">
+            <img class="gallery__media" src="assets/other/photos/06-praga.jpg" data-full="assets/other/photos/06-praga-full.jpg" alt="Prague Castle across the river, seen from Charles Bridge" data-es-a-alt="El Castillo de Praga del otro lado del río, desde el Puente de Carlos" loading="lazy">
+          </button>
+          <p class="gallery__caption"><b data-es="Praga, República Checa">Prague, Czechia</b><span data-es="Película 35 mm">35mm film</span></p>
+        </li>
+        <li class="gallery__item gallery__item--portrait">
+          <button class="gallery__open" type="button" aria-label="Open image 7" data-es-a-aria-label="Abrir imagen 7">
+            <img class="gallery__media" src="assets/other/photos/07-cesena.jpg" data-full="assets/other/photos/07-cesena-full.jpg" alt="An ornate fountain in front of a long brick wall" data-es-a-alt="Una fuente ornamentada frente a un largo muro de ladrillo" loading="lazy">
+          </button>
+          <p class="gallery__caption"><b data-es="Cesena, Italia">Cesena, Italy</b><span data-es="Película 35 mm">35mm film</span></p>
+        </li>
+        <li class="gallery__item gallery__item--landscape">
+          <button class="gallery__open" type="button" aria-label="Open image 8" data-es-a-aria-label="Abrir imagen 8">
+            <img class="gallery__media" src="assets/other/photos/08-sagrada-familia.jpg" data-full="assets/other/photos/08-sagrada-familia-full.jpg" alt="The towers of the Sagrada Família at a tilted angle, with a crane" data-es-a-alt="Las torres de la Sagrada Família en ángulo inclinado, con una grúa" loading="lazy">
+          </button>
+          <p class="gallery__caption"><b data-es="Sagrada Família, Barcelona">Sagrada Família, Barcelona</b><span data-es="Película 35 mm">35mm film</span></p>
+        </li>
+        <li class="gallery__item gallery__item--landscape">
+          <button class="gallery__open" type="button" aria-label="Open image 9" data-es-a-aria-label="Abrir imagen 9">
+            <img class="gallery__media" src="assets/other/photos/09-toscana.jpg" data-full="assets/other/photos/09-toscana-full.jpg" alt="A tree with a paper flower overlooking green hills and vineyards" data-es-a-alt="Un árbol con una flor de papel frente a colinas verdes y viñedos" loading="lazy">
+          </button>
+          <p class="gallery__caption"><b data-es="Toscana, Italia">Tuscany, Italy</b><span data-es="Película 35 mm">35mm film</span></p>
+        </li>
+        <li class="gallery__item gallery__item--landscape">
+          <button class="gallery__open" type="button" aria-label="Open image 10" data-es-a-aria-label="Abrir imagen 10">
+            <img class="gallery__media" src="assets/other/photos/10-nafplio.jpg" data-full="assets/other/photos/10-nafplio-full.jpg" alt="A sunny square with cafés and umbrellas" data-es-a-alt="Una plaza soleada con cafés y sombrillas" loading="lazy">
+          </button>
+          <p class="gallery__caption"><b data-es="Nauplia, Grecia">Nafplio, Greece</b><span data-es="Película 35 mm">35mm film</span></p>
+        </li>
+        </ul>
+      </div>
+
+      <dialog class="lightbox" aria-label="Image viewer" data-es-a-aria-label="Visor de imágenes">
+        <button class="lightbox__close" type="button" aria-label="Close" data-es-a-aria-label="Cerrar">×</button>
+        <figure class="lightbox__figure">
+          <img class="lightbox__img" alt="">
+          <figcaption class="lightbox__caption"></figcaption>
+        </figure>
+      </dialog>
+    </section>
+
+  <section class="section contact" id="contacto">
+    <div class="wrap reveal contact__grid">
+      <div class="contact__copy">
+        <h2 class="display display--xl" data-es="<span class='accent'>Hablemos.</span>">Let's <span class="accent">talk.</span></h2>
+        <p class="lead" data-es="¿Tenés un producto que necesita flujos más claros, una estrategia por definir o un sistema por construir? Contame un poco y buscamos un momento para charlar.">Have a product that needs clearer flows, a strategy to shape, or a system to build? Tell me a bit about it and let's find a time to talk.</p>
+        <a class="contact__mail" href="mailto:lalapicoroso@gmail.com">lalapicoroso@gmail.com</a>
+      </div>
+      <div class="contact__actions">
+        <a class="btn btn--primary" href="mailto:lalapicoroso@gmail.com" data-es="Escribime">Say hello</a>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-live">
+      <div class="footer-item">
+        <span class="footer-label" data-es="Hora local">Local time</span>
+        <span><time class="js-clock">--:--</time> <span data-es="en Buenos Aires">in Buenos Aires</span></span>
+      </div>
+      <div class="footer-item">
+        <span class="footer-label" data-es="Ahora">Currently</span>
+        <span data-es="Sacando fotos con una Fujifilm X-S10 · Leyendo <em>Distancia de rescate</em>, de Samanta Schweblin">Shooting with a Fujifilm X-S10 · Reading <em>Distancia de rescate</em> by Samanta Schweblin</span>
+      </div>
+      <figure class="footer-shot">
+        <a href="assets/other/ultima-foto.jpg" target="_blank" rel="noopener" aria-label="See the full photo" data-es-a-aria-label="Ver la foto completa">
+          <img src="assets/other/ultima-foto-thumb.jpg" alt="A stone bench under the trees, in soft afternoon light" data-es-a-alt="Un banco de piedra bajo los árboles, con luz suave de la tarde" width="64" height="64" loading="lazy">
+        </a>
+        <figcaption>
+          <span class="footer-label" data-es="Última foto">Last shot</span>
+          <span data-es="San Antonio de Areco, Buenos Aires · Marzo 2026">San Antonio de Areco, Buenos Aires · March 2026</span>
+        </figcaption>
+      </figure>
+    </div>
+    <div class="wrap footer-bottom">
+      <span>© 2026 Lala</span>
+      <span class="footer-hint" data-es="Psst… apretá <kbd>G</kbd>">Psst… press <kbd>G</kbd></span>
+      <span class="footer-links"><a href="https://www.linkedin.com/in/lalapicorosoux/" target="_blank" rel="noopener">LinkedIn ↗</a><a href="mailto:lalapicoroso@gmail.com">lalapicoroso@gmail.com</a></span>
+    </div>
+  </footer>
+
+  <nav class="pill" aria-label="Main" data-es-a-aria-label="Principal">
+    <a href="#top" aria-current="true" data-es="Inicio">Home</a>
+    <a href="#work" data-es="Trabajo">Work</a>
+    <a href="#about" data-es="Sobre mí">About</a>
+    <a href="#contacto" data-es="Contacto">Contact</a>
+    <button class="theme-toggle theme-toggle--icon" type="button" aria-label="Switch to dark mode">
+      <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+      <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    </button>
+  </nav>
+
+</body>
+</html>
