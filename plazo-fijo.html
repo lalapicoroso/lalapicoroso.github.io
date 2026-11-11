@@ -18,12 +18,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Geist:wght@300..600&display=swap" rel="stylesheet">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="css/styles.css?v=20261109-23">
-  <script src="js/theme.js?v=20261109-23"></script>
-  <script src="js/i18n.js?v=20261109-23"></script>
-  <script src="js/transition.js?v=20261109-23"></script>
-  <script src="js/motion.js?v=20261109-23" defer></script>
-  <script src="js/case.js?v=20261109-23" defer></script>
+  <link rel="stylesheet" href="css/styles.css?v=20261110-1">
+  <script src="js/theme.js?v=20261110-1"></script>
+  <script src="js/i18n.js?v=20261110-1"></script>
+  <script src="js/transition.js?v=20261110-1"></script>
+  <script src="js/motion.js?v=20261110-1" defer></script>
+  <script src="js/case.js?v=20261110-1" defer></script>
 </head>
 <body class="has-pill case--plazo-fijo">
 
@@ -142,7 +142,65 @@
       </div>
     </section>
 
-    <section class="cs-section ed-section" id="design-system">
+    <section class="cs-section ed-section" id="states">
+      <div class="cs-wrap reveal">
+        <p class="ed-label" data-es="Estados y casos borde">States and edge cases</p>
+        <h2 class="ed-h2" data-es="Cada estado, <span class='accent'>mapeado antes que las pantallas.</span>">Every state, <span class="accent">mapped before the screens.</span></h2>
+        <div class="ed-lead"><p data-es="Un agente que mueve dinero no puede tener huecos. Antes de diseñar la UI armé el mapa completo: qué lo dispara, qué reglas chequea, qué hace según el nivel de confianza, qué decide la persona y qué pasa al vencer. Los colores siguen la regla del sistema: <mark class='hl'>agua es el agente, violeta es la persona</mark>.">An agent that moves money can’t have gaps. Before designing the UI, I mapped every state: what triggers it, which rules it checks, what it does at each trust level, what the person decides, and what happens at maturity. Colors follow the system rule: <mark class="hl">agua is the agent, violet is the person</mark>.</p></div>
+
+        <div class="sm" role="img" aria-label="State map of the agentic term deposit" data-es-a-aria-label="Mapa de estados del plazo fijo con agente">
+          <div class="sm__legend">
+            <span class="sm__key sm__key--agent" data-es="Lo hace o sugiere el agente">The agent does or suggests</span>
+            <span class="sm__key sm__key--person" data-es="Lo decide la persona">The person decides</span>
+            <span class="sm__key sm__key--system" data-es="Sistema y reglas">System and rules</span>
+            <span class="sm__key sm__key--edge" data-es="Caso borde">Edge case</span>
+          </div>
+          <div class="sm__grid">
+            <div class="sm__col">
+              <p class="sm__step"><b>1</b> <span data-es="Detecta">Detect</span></p>
+              <div class="sm__node sm__node--system"><b data-es="Dinero quieto">Idle money</b><span data-es="Saldo sin moverse más de 15 días, sueldo acreditado o un vencimiento cerca.">Balance untouched for 15+ days, a paycheck coming in, or a maturity coming up.</span></div>
+            </div>
+            <div class="sm__col">
+              <p class="sm__step"><b>2</b> <span data-es="Chequea">Check</span></p>
+              <div class="sm__node sm__node--system"><b data-es="Tus reglas">Your rules</b><span data-es="Respeta la reserva que nunca se toca y el plazo que elegiste.">Respects the reserve that is never touched and your preferred term.</span></div>
+              <div class="sm__node sm__node--edge"><b data-es="Nada para sugerir">Nothing to suggest</b><span data-es="Si después de la reserva no sobra dinero, no aparece nada.">If nothing is left after the reserve, nothing shows up.</span></div>
+            </div>
+            <div class="sm__col">
+              <p class="sm__step"><b>3</b> <span data-es="Según el nivel">By trust level</span></p>
+              <div class="sm__node sm__node--agent"><i data-es="Avisame">Just notify me</i><b data-es="Aviso">Notice</b><span data-es="Cuenta que hay dinero quieto. La persona decide si hace algo.">Says there’s idle money. The person decides what to do.</span></div>
+              <div class="sm__node sm__node--agent sm__node--main"><i data-es="Proponeme · recomendado">Suggest · recommended</i><b data-es="Sugerencia">Suggestion</b><span data-es="“Separá $300.000 por 30 días”, con intereses y por qué.">“Set aside $300,000 for 30 days”, with interest and why.</span></div>
+              <div class="sm__node sm__node--agent"><i data-es="Armalo por mí">Do it for me</i><b data-es="Lo arma solo">Sets it up</b><span data-es="Dentro de tus reglas, y queda en la actividad.">Within your rules, and it’s logged in the activity.</span></div>
+            </div>
+            <div class="sm__col">
+              <p class="sm__step"><b>4</b> <span data-es="Decide">Decide</span></p>
+              <div class="sm__node sm__node--person"><b data-es="Confirmar con Face ID">Confirm with Face ID</b><span data-es="Revisión con TNA, TEA y la casilla de “no puedo usar este dinero hasta…”.">Review with rates and the “I can’t use this money until…” checkbox.</span></div>
+              <div class="sm__node sm__node--person"><b data-es="Cambiar monto o plazo">Change amount or term</b><span data-es="30, 60 o 90 días, con los números en vivo. Vuelve a confirmar.">30, 60 or 90 days, with live numbers. Back to confirm.</span></div>
+              <div class="sm__node sm__node--edge"><b data-es="No, gracias">No, thanks</b><span data-es="La sugerencia se cierra y el dinero queda disponible.">The suggestion closes and the money stays available.</span></div>
+            </div>
+            <div class="sm__col">
+              <p class="sm__step"><b>5</b> <span data-es="Activo">Active</span></p>
+              <div class="sm__node sm__node--system"><b data-es="Plazo fijo activo">Active deposit</b><span data-es="Aparece en la barra como “Vence el 9/12”, con capital e intereses.">Shows in the money bar as “Matures Dec 9”, with capital and interest.</span></div>
+            </div>
+            <div class="sm__col">
+              <p class="sm__step"><b>6</b> <span data-es="Al vencer">At maturity</span></p>
+              <div class="sm__node sm__node--agent"><b data-es="Renovalo por 30 días más">Renew for 30 more days</b><span data-es="La sugerencia de renovación, con los nuevos intereses.">The renewal suggestion, with the new interest.</span></div>
+              <div class="sm__node sm__node--person"><b data-es="Otras opciones">Other options</b><span data-es="Cambiar el plazo o pasar el dinero a la cuenta.">Change the term or move the money to the account.</span></div>
+              <div class="sm__node sm__node--system"><b data-es="Según tu regla">By your rule</b><span data-es="Si no hay respuesta, pasa lo que definiste para el vencimiento.">If there’s no answer, what you set for maturity happens.</span></div>
+            </div>
+          </div>
+          <div class="sm__any">
+            <p class="sm__step sm__step--any" data-es="En cualquier momento">At any time</p>
+            <div class="sm__anyrow">
+              <div class="sm__node sm__node--person"><b data-es="Necesito usar mi dinero">I need my money</b><span data-es="Primero lo disponible, después lo que se libera pronto y, por último, el rescate.">First what’s available, then what’s released soon, and only then early withdrawal.</span></div>
+              <div class="sm__node sm__node--person"><b data-es="Pausar el agente">Pause the agent</b><span data-es="Un interruptor en Actividad. Dejan de llegar sugerencias.">A switch in Activity. Suggestions stop coming.</span></div>
+              <div class="sm__node sm__node--system"><b data-es="Actividad">Activity log</b><span data-es="Todo lo que sugirió o hizo el agente, con fecha y regla aplicada.">Everything the agent suggested or did, with date and rule applied.</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section cs-section--tint ed-section" id="design-system">
       <div class="cs-wrap reveal">
         <p class="ed-label">Design system</p>
         <h2 class="ed-h2" data-es="Un módulo con identidad propia.">A module with its own identity.</h2>
@@ -153,7 +211,7 @@
       </div>
     </section>
 
-    <section class="cs-section cs-section--tint ed-section" id="prototype">
+    <section class="cs-section ed-section" id="prototype">
       <div class="cs-wrap reveal">
         <h2 class="ed-h2" data-es="Prototipo.">Prototype.</h2>
         <p class="ed-sub" data-es="Las 15 pantallas, navegables, con los números recalculándose en vivo. Está en español, como la app.">All 15 screens, clickable, with the numbers updating live. It’s in Spanish, like the app.</p>
@@ -184,8 +242,8 @@
       <div class="cs-wrap cs-next__row">
         <div>
           <p class="cs-next__label" data-es="Próximo caso">Next case</p>
-          <a class="cs-next__link" href="panda.html">Panda <i aria-hidden="true">→</i></a>
-          <p class="cs-next__desc" data-es="El rediseño de la app de una clínica veterinaria, en proceso">Redesigning a veterinary clinic’s app, in progress</p>
+          <a class="cs-next__link" href="dialpad.html">Dialpad <i aria-hidden="true">→</i></a>
+          <p class="cs-next__desc" data-es="Comunicación potenciada con IA, a escala">AI-powered communication at scale</p>
         </div>
       </div>
     </section>
