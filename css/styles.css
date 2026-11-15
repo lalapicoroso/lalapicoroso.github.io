@@ -4062,6 +4062,9 @@ a.tile:hover {
 [data-theme="light"] .case--plazo-fijo .ed-band .accent { --accent-bg: #7cf5df; color: var(--band); }
 .case--plazo-fijo .cs-proto { background: #e7e5ef; }
 .case--plazo-fijo .cs-proto iframe { height: 940px; }
+.case--plazo-fijo .cs-proto--wa { background: #f6f4fd; }
+.case--plazo-fijo .cs-proto--wa iframe { height: 1020px; }
+.case--plazo-fijo #whatsapp .cs-proto__open + .cs-proto__open { margin-top: 8px; }
 
 /* Cards destacadas (Dialpad, Yuda): la imagen crece apenas al pasar el mouse, igual que en las cards de la grilla */
 .feature__media video,
