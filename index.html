@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Geist:wght@300..600&family=Inter+Tight:wght@400..500&display=swap" rel="stylesheet">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="css/styles.css?v=20261110-1">
+  <link rel="stylesheet" href="css/styles.css?v=20261114-1">
   <script src="js/theme.js?v=20261110-1"></script>
   <script src="js/i18n.js?v=20261110-1"></script>
   <script src="js/transition.js?v=20261110-1"></script>
@@ -33,7 +33,11 @@
     <div class="wrap">
       <a href="#top" class="logo" aria-label="Home" data-es-a-aria-label="Inicio">LP</a>
       <span class="status" data-es="Buenos Aires · Disponible">Buenos Aires · Available</span>
-      <button class="lang-toggle" type="button" aria-label="Ver en español" data-es-a-aria-label="View in English"><span lang="en">EN</span><i aria-hidden="true">/</i><span lang="es">ES</span></button>
+      <div class="header-actions">
+        <a class="hdr-link" href="assets/Laura-Picoroso-CV.pdf?v=20261114" download="Laura Picoroso CV.pdf" data-es="CV <span aria-hidden='true'>↓</span>">CV <span aria-hidden="true">↓</span></a>
+        <a class="hdr-btn" href="mailto:lalapicoroso@gmail.com" data-es="Contacto">Contact</a>
+        <button class="lang-toggle" type="button" aria-label="Ver en español" data-es-a-aria-label="View in English"><span lang="en">EN</span><i aria-hidden="true">/</i><span lang="es">ES</span></button>
+      </div>
     </div>
   </header>
 
@@ -73,6 +77,7 @@
               <p class="meta" data-es="2026 · Prueba de concepto">2026 · Proof of concept</p>
               <h3 class="feature__title" data-es="Plazos fijos con agente">Agentic term deposits</h3>
               <p class="feature__desc" data-es="Un agente que sugiere cuánto dinero separar y por cuánto tiempo, para uno de los bancos más grandes de Argentina">An agent that suggests how much money to set aside and for how long, for one of Argentina’s largest banks</p>
+              <p class="outcome" data-es="Prototipo en código, listo para testear, con plan de validación">Coded prototype, ready to test, with a validation plan</p>
               <ul class="chips"><li>Fintech</li><li data-es="UX agéntica">Agentic UX</li></ul>
               <span class="case__arrow" aria-hidden="true">↗</span>
             </div>
@@ -85,6 +90,7 @@
               <p class="meta">2023</p>
               <h3 class="feature__title">Dialpad</h3>
               <p class="feature__desc" data-es="Comunicación potenciada con IA, a escala">AI-powered communication at scale</p>
+              <p class="outcome" data-es="Lo usan 100K+ personas · guías de IA adoptadas en toda la organización">Used by 100K+ people · AI guidelines adopted org-wide</p>
               <ul class="chips"><li data-es="IA">AI</li><li data-es="Mobile">Mobile</li></ul>
               <span class="case__arrow" aria-hidden="true">↗</span>
             </div>
@@ -99,6 +105,7 @@
               <p class="meta">2025</p>
               <h3 class="tile__title">Yuda</h3>
               <p class="tile__desc" data-es="Una plataforma mobile que conecta a usuarios con profesionales verificados de servicios para el hogar">A mobile platform connecting users with verified home service professionals</p>
+              <p class="outcome" data-es="En tests de usabilidad, el 90% vio valor y el 63% cotizó sin ayuda">In usability tests, 90% saw value and 63% quoted without help</p>
               <ul class="chips"><li data-es="Marketplace">Marketplace</li><li data-es="Investigación">Research</li></ul>
               <span class="case__arrow" aria-hidden="true">↗</span>
             </div>
@@ -109,6 +116,7 @@
               <p class="meta">2024</p>
               <h3 class="tile__title">Plei</h3>
               <p class="tile__desc" data-es="Dashboard B2B para que los complejos deportivos gestionen partidos, check-ins y la operación diaria">B2B dashboard to help facilities manage games, check-ins, and daily operations</p>
+              <p class="outcome" data-es="Menos errores en días de partido y menos planillas manuales">Fewer errors on match days and less manual tracking</p>
               <ul class="chips"><li data-es="B2B">B2B</li><li data-es="Dashboard">Dashboard</li></ul>
               <span class="case__arrow" aria-hidden="true">↗</span>
             </div>
@@ -119,6 +127,7 @@
               <p class="meta">2022</p>
               <h3 class="tile__title">Kavak Capital</h3>
               <p class="tile__desc" data-es="Nueva sección de autogestión para un unicornio fintech">New self-management section for a fintech unicorn</p>
+              <p class="outcome" data-es="Menos llamadas al Contact Center y más NPS tras el lanzamiento">Fewer Contact Center calls and a higher NPS after launch</p>
               <ul class="chips"><li data-es="Fintech">Fintech</li><li data-es="Investigación">Research</li></ul>
               <span class="case__arrow" aria-hidden="true">↗</span>
             </div>
@@ -129,6 +138,7 @@
               <p class="meta" data-es="2026 · En proceso">2026 · Work in progress</p>
               <h3 class="tile__title">Panda</h3>
               <p class="tile__desc" data-es="El rediseño de la app de una clínica veterinaria: nueva identidad, design system y todos los flujos para tutores">Redesigning a veterinary clinic’s app: a new look and feel, a design system and every flow for pet owners</p>
+              <p class="outcome" data-es="En proceso: seguí el caso a medida que avanza">In progress: follow the case as it evolves</p>
               <ul class="chips"><li data-es="Salud animal">Pet health</li><li data-es="Design system">Design system</li></ul>
               <span class="case__arrow" aria-hidden="true">↗</span>
             </div>
@@ -139,6 +149,7 @@
               <p class="meta">2021</p>
               <h3 class="tile__title">ShiftMed</h3>
               <p class="tile__desc" data-es="Credenciales que se pueden terminar y cobro en el día, para una app de staffing de salud">A credentialing flow people can finish, and same-day pay, for a healthcare staffing app</p>
+              <p class="outcome" data-es="30% más de trabajadores completó sus credenciales">30% more workers finished credentialing</p>
               <ul class="chips"><li data-es="Salud">Healthcare</li><li data-es="Mobile">Mobile</li></ul>
               <span class="case__arrow" aria-hidden="true">↗</span>
             </div>
@@ -274,7 +285,7 @@
             </div>
             <div class="ab-links">
               <a class="ab-link" href="https://www.linkedin.com/in/lalapicorosoux/" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a>
-              <a class="ab-link" href="assets/Laura-Picoroso-CV.pdf?v=20261110-1" download="Laura Picoroso CV.pdf" data-es="Descargar CV <span aria-hidden='true'>↓</span>">Download CV <span aria-hidden="true">↓</span></a>
+              <a class="ab-link" href="assets/Laura-Picoroso-CV.pdf?v=20261114" download="Laura Picoroso CV.pdf" data-es="Descargar CV <span aria-hidden='true'>↓</span>">Download CV <span aria-hidden="true">↓</span></a>
             </div>
           </aside>
         </div>
@@ -349,7 +360,7 @@
               <p class="xp__mode" data-es="Híbrido">Hybrid</p>
             </div>
             <div class="xp__what">
-              <h3 class="xp__role" data-es="Lead Product Designer">Lead Product Designer</h3>
+              <h3 class="xp__role" data-es="Senior Product Designer">Senior Product Designer</h3>
               <p class="xp__desc" data-es="Lideré Yuda, un marketplace de servicios para el hogar de dos lados, del concepto al MVP — incluido su design system y la investigación de campo en Asunción.">Led Yuda, a two-sided home services marketplace, from concept to MVP — including its design system and field research in Asunción.</p>
               <ul class="chips xp__tags"><li data-es="Marketplace">Marketplace</li><li data-es="Design system">Design system</li><li data-es="Diseño asistido por IA">AI-assisted design</li></ul>
               <a class="xp__case" href="yuda.html" data-es="Ver el caso de Yuda →">See the Yuda case →</a>
