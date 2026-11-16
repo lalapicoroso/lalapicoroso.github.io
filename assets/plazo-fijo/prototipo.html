@@ -10,7 +10,7 @@
 :root{
   /* color: primitivos */
   --violet-950:#0A0730; --violet-800:#3A21A6; --violet-600:#5A3FEA; --violet-700:#4A31D6;
-  --lavender-300:#C1B3FF; --lavender-100:#ECE7FF; --mist:#F6F4FD; --white:#FFFFFF;
+  --lavender-300:#C1B3FF; --lavender-100:#ECE7FF; --mist:#F7F6F8; --white:#FFFFFF;
   --ink-900:#120B33; --ink-600:#5E5880; --ink-400:#A29CBC; --line:#E9E6F3;
   --agua-300:#7CF5DF; --green-700:#0B7A5C;
   --amber-700:#8A5A00; --amber-100:#FCEFCF; --red-600:#C23A4B; --red-100:#FDE6E9;
@@ -79,6 +79,7 @@
 /* ---------- chips ---------- */
 .chip{display:inline-flex;align-items:center;gap:6px;height:26px;padding:0 10px;border-radius:var(--r-chip);font:600 12px/1 var(--font);background:var(--tint);color:var(--action);white-space:nowrap}
 .chip--agent{background:var(--agent);color:var(--on-agent)}
+.chip--text{background:none;padding:0;color:var(--agent);font-weight:500}
 .chip--ok{background:#DDF3EA;color:var(--positive)}
 .chip--warn{background:var(--warn-bg);color:var(--warn)}
 .pill{display:inline-flex;align-items:center;justify-content:center;height:40px;padding:0 16px;border-radius:var(--r-chip);font:600 14px/1 var(--font);background:var(--surface);box-shadow:inset 0 0 0 1.5px var(--border);color:var(--text)}
@@ -201,7 +202,7 @@ body{background:#E7E5EF;min-height:100vh}
 .succ__ic{width:72px;height:72px;border-radius:50%;background:var(--agent);color:var(--on-agent);display:grid;place-items:center}
 .succ__rows{margin-top:28px;display:flex;flex-direction:column;gap:12px}
 .succ__rows p{display:flex;gap:10px;align-items:center;font:var(--t-callout);color:rgba(255,255,255,.85)}
-.li--on{background:#E9FBF7}
+.li--on{background:var(--lavender-100)}
 .night-bar .leg{color:var(--on-night-2)}
 .night-bar .leg b{color:#fff}
 /* app del banco (neutra, fuera del módulo) */
@@ -287,6 +288,7 @@ const foot = h => `<div class="foot">${h}</div>`;
 const bar = (parts, night = true) => `<div class="bar">${parts.map(p => `<i style="flex:${p.v};background:${p.c}"></i>`).join('')}</div><div class="leg">${parts.map(p => `<span style="flex:${p.v}">${p.l}<b${p.hl ? ' style="color:var(--agent)"' : ''}>${$(p.v * 10000)}</b></span>`).join('')}</div>`;
 const sheet = (base, inner) => `${R(base)}<div class="scrim" data-back></div><div class="sheet" role="dialog"><div class="grab"></div>${inner}</div>`;
 const agentChip = (t = 'Sugerencia') => `<span class="chip chip--agent">${ic('spark', 12)}${t}</span>`;
+const agentText = (t = 'Sugerencia') => `<span class="chip chip--text">${ic('spark', 14)}${t}</span>`;
 const li = ({ lead, date, t, s, end = '', go, cls = '' }) => `<${go ? `button data-go="${go}"` : 'div'} class="li ${cls}">${date ? `<span class="li__date">${date}</span>` : ''}${lead ? `<span class="li__lead">${ic(lead)}</span>` : ''}<span class="li__main"><span class="li__t">${t}</span>${s ? `<span class="li__s">${s}</span>` : ''}</span>${end}</${go ? 'button' : 'div'}>`;
 
 /* ---------- pantallas ---------- */
@@ -298,9 +300,9 @@ inicio: { f: 'Armar el primer plazo fijo', l: 'Inicio de la app del banco', bank
   <div class="row" style="height:52px"><b class="t-title2">Hola, Sofía</b><span class="bk-ic">${ic('bell')}</span></div>
   <div class="bk-card"><p class="t-label c2">Caja de ahorro en pesos</p><p class="t-display" style="margin-top:6px">$580.000</p>
   <div class="bk-actions">${[['transfer', 'Transferir'], ['card', 'Pagar'], ['cash', 'Cargar'], ['trend', 'Invertir']].map(([i, t]) => `<span><i>${ic(i)}</i>${t}</span>`).join('')}</div></div>
-  <div class="night" style="margin-top:14px">${agentChip()}
+  <div class="night" style="margin-top:14px">${agentText()}
   <p class="t-title2" style="margin-top:12px">Tenés $380.000 sin usar hace 18 días</p>
-  <p class="t-callout" style="color:var(--on-night-2);margin-top:6px">Con un plazo fijo podrías ganar unos ${$(interest(380000, 30))} en 30 días, sin tocar lo que necesitás.</p>
+  <p class="t-callout" style="color:var(--on-night-2);margin-top:6px">Armá tu plazo fijo con el dinero que no usás y generá hasta ${$(interest(380000, 30))} en 30 días.</p>
   <button class="btn btn--agent btn--s" style="margin-top:16px" data-go="presentacion" data-tr="up">Ver sugerencia</button></div>
   <p class="t-headline" style="margin:22px 0 10px">Últimos movimientos</p>
   <div class="list">${li({ lead: 'cash', t: 'Supermercado', s: 'Ayer', end: '<b>−$42.300</b>' })}${li({ lead: 'card', t: 'Pago de tarjeta', s: '5/11', end: '<b>−$118.900</b>' })}</div>
@@ -310,22 +312,22 @@ inicio: { f: 'Armar el primer plazo fijo', l: 'Inicio de la app del banco', bank
 presentacion: { f: 'Armar el primer plazo fijo', l: 'Presentación', modal: true, r: () => `${nav('', 'close')}
   <div class="pad"><span class="hero-ic">${ic('spark', 28)}</span>
   <h1 class="t-title1" style="margin-top:20px">Sugerencias de plazo fijo</h1>
-  <p class="t-body c2" style="margin-top:10px">Miramos tus ingresos y tus gastos para sugerirte cuánto dinero podés separar y por cuánto tiempo.</p>
+  <p class="t-body c2" style="margin-top:10px">Analizamos tus ingresos y tus gastos para sugerirte cuánto dinero separar y por cuánto tiempo.</p>
   <div class="list" style="margin-top:24px">
   ${li({ lead: 'spark', t: 'Te sugerimos cuánto separar', s: 'Según lo que cobrás y lo que gastás cada mes.' })}
   ${li({ lead: 'check', t: 'Vos decidís', s: 'Nunca movemos dinero sin tu confirmación o una regla tuya.' })}
-  ${li({ lead: 'pause', t: 'Lo pausás cuando quieras', s: 'Y ves todo lo que hicimos en tu actividad.' })}
+  ${li({ lead: 'pause', t: 'Lo pausás cuando quieras', s: 'Podés chequear todos los movimientos desde tu actividad.' })}
   </div></div>
   ${foot(`<button class="btn btn--primary" data-go="nivel">Empezar</button><button class="btn btn--tertiary" data-back>Ahora no</button>`)}` },
 
 nivel: { f: 'Armar el primer plazo fijo', l: 'Cómo te ayudamos', r: () => `${nav()}
-  <div class="pad">${steps(1, 2)}<h1 class="t-title1" style="margin-top:20px">Elegí cómo querés que te ayudemos</h1>
+  <div class="pad">${steps(1, 2)}<h1 class="t-title1" style="margin-top:20px">Elegí cómo querés que te ayudemos</h1><p class="t-label c2" style="margin-top:8px">Podés cambiarlo cuando quieras.</p>
   <div class="stack" style="margin-top:20px">${[
-    ['avisa', 'Avisame', 'Te contamos cuando tengas dinero sin usar. El plazo fijo lo armás vos.'],
-    ['propone', 'Proponeme', 'Armamos la propuesta completa y vos la confirmás con un toque.', 'Recomendado'],
-    ['actua', 'Armalo por mí', 'Armamos y renovamos plazos fijos dentro de tus reglas. Te avisamos y podés cancelar hasta las 15 h.'],
+    ['avisa', 'Avisame', 'Te avisamos cuando tengas dinero sin usar. El plazo fijo lo armás vos.'],
+    ['propone', 'Proponeme', 'Armamos la propuesta completa y vos la confirmás o la modificás.', 'Recomendado'],
+    ['actua', 'Armalo por mí', 'Armamos y renovamos los plazos fijos dentro de tus reglas. Podés cancelar hasta las 15 hs.'],
   ].map(([k, t, d, b]) => `<button class="opt ${S.level === k ? 'on' : ''}" data-set="level=${k}"><span class="radio ${S.level === k ? 'on' : ''}"></span><span><span class="t-headline" style="display:flex;gap:8px;align-items:center">${t}${b ? `<span class="chip">${b}</span>` : ''}</span><span class="t-callout c2" style="display:block;margin-top:4px">${d}</span></span></button>`).join('')}</div>
-  <p class="t-label c2" style="margin-top:14px">Podés cambiarlo cuando quieras.</p></div>
+  </div>
   ${foot(`<button class="btn btn--primary" data-go="reglas">Continuar</button>`)}` },
 
 reglas: { f: 'Armar el primer plazo fijo', l: 'Tus reglas', r: () => `${nav()}
@@ -334,13 +336,13 @@ reglas: { f: 'Armar el primer plazo fijo', l: 'Tus reglas', r: () => `${nav()}
   <div class="stepper" style="margin-top:14px"><button data-set="reserve=${Math.max(0, S.reserve - 50000)}" aria-label="Menos">${ic('minus')}</button><span class="t-amount">${$(S.reserve)}</span><button data-set="reserve=${Math.min(500000, S.reserve + 50000)}" aria-label="Más">${ic('plus')}</button></div></div>
   <div class="card" style="margin-top:10px"><p class="t-headline">Plazo que te sugerimos</p><p class="t-callout c2" style="margin-top:2px">Después podés cambiarlo en cada sugerencia.</p>
   <div class="row" style="justify-content:flex-start;gap:8px;margin-top:12px">${[30, 60, 90].map(t => `<button class="pill ${S.terms[t] ? 'on' : ''}" role="radio" aria-checked="${!!S.terms[t]}" data-set="${[30, 60, 90].map(k => `terms.${k}=${k === t}`).join(';')}">${t} días</button>`).join('')}</div></div>
-  <div class="card" style="margin-top:10px"><p class="t-headline">Cuando vence un plazo fijo</p>
-  <div class="seg" style="margin-top:12px">${[['avisar', 'Avisame'], ['renovar', 'Renovalo'], ['cuenta', 'A mi cuenta']].map(([k, t]) => `<button class="${S.atEnd === k ? 'on' : ''}" data-set="atEnd=${k}">${t}</button>`).join('')}</div></div></div>
+  <div class="card" style="margin-top:10px"><p class="t-headline">Cuando está por vencer</p>
+  <div class="seg" style="margin-top:12px">${[['avisar', 'Avisame'], ['renovar', 'Renovalo']].map(([k, t]) => `<button class="${S.atEnd === k ? 'on' : ''}" data-set="atEnd=${k}">${t}</button>`).join('')}</div></div></div>
   ${foot(`<button class="btn btn--primary" data-go="propuesta" data-tr="fade">Guardar y ver sugerencia</button>`)}` },
 
 propuesta: { f: 'Armar el primer plazo fijo', l: 'Sugerencia', sb: 'light', r: () => { clamp(); const q = ACCOUNT - S.amount; return `
   <div class="night-top"></div>${navNight()}
-  <div class="pad" style="color:#fff;position:relative">${agentChip()}
+  <div class="pad" style="color:#fff;position:relative">${agentText()}
   <h1 class="t-title1" style="margin-top:14px">Separá ${$(S.amount)}<br>por ${S.term} días</h1>
   <div class="row" style="margin-top:22px;align-items:flex-end"><div><p class="t-label" style="color:var(--on-night-2)">Intereses estimados</p><p class="t-amount" style="color:var(--agent)">+${$(interest(S.amount, S.term))}</p></div><div style="text-align:right"><p class="t-label" style="color:var(--on-night-2)">Lo cobrás el</p><p class="t-amount">${DUE[S.term]}</p></div></div>
   <div class="night-bar" style="margin-top:20px">${bar([{ v: q / 10000, c: 'var(--available)', l: 'Queda en tu cuenta' }, { v: S.amount / 10000, c: 'var(--agent)', l: 'Plazo fijo', hl: 1 }])}</div></div>
@@ -364,31 +366,31 @@ revisar: { f: 'Armar el primer plazo fijo', l: 'Revisar', r: () => `${nav('Revis
   ${[['Monto', $(S.amount)], ['Plazo', `${S.term} días`], ['Vence', DUE_LONG[S.term]], ['Intereses estimados', `+${$(interest(S.amount, S.term))}`], ['Cobrás al vencer', $(S.amount + interest(S.amount, S.term))], ['TNA / TEA', `37% / ${tea(S.term)}`], ['Sale de', 'Caja de ahorro en pesos'], ['Al vencer', { avisar: 'Te avisamos', renovar: 'Lo renovamos', cuenta: 'Pasa a tu cuenta' }[S.atEnd]]].map(([k, v]) => `<div class="li"><span class="li__main t-callout c2">${k}</span><b style="font-weight:650">${v}</b></div>`).join('')}
   </div>
   <button class="opt" style="margin-top:12px;align-items:center" data-set="ack=${!S.ack}"><span class="check ${S.ack ? 'on' : ''}">${S.ack ? ic('check', 14, 3) : ''}</span><span class="t-callout">Entiendo que no puedo usar este dinero hasta el ${DUE[S.term]}.</span></button>
-  <p class="t-label c2" style="margin-top:12px;display:flex;gap:8px;align-items:center">${ic('clock', 16)}Podés cancelarlo hasta hoy a las 15 h.</p></div>
+  <p class="t-label c2" style="margin-top:12px;display:flex;gap:8px;align-items:center">${ic('clock', 16)}Podés cancelarlo hasta hoy a las 15 hs.</p></div>
   ${foot(`<button class="btn btn--primary" data-go="faceid" data-tr="none" ${S.ack ? '' : 'disabled'}>${ic('face')}Confirmar con Face ID</button>`)}` },
 
 faceid: { f: 'Armar el primer plazo fijo', l: 'Face ID', auto: ['listo', 1300], r: () => `${R('revisar')}<div class="scrim scrim--soft"></div><div class="faceid"><div class="faceid__glyph">${ic('face', 64, 1.6)}</div><p>Face ID</p></div>` },
 
 listo: { f: 'Armar el primer plazo fijo', l: 'Plazo fijo armado', sb: 'light', night: true, pop: 9, r: () => `
   <div class="succ"><span class="succ__ic">${ic('check', 34, 2.6)}</span>
-  <h1 class="t-title1" style="margin-top:24px">Listo, armaste tu plazo fijo</h1>
+  <h1 class="t-title1" style="margin-top:24px">Listo, ya tenés tu plazo fijo</h1>
   <p class="t-body" style="color:var(--on-night-2);margin-top:10px">${$(S.amount)} hasta el ${DUE[S.term]}. Ese día cobrás ${$(S.amount + interest(S.amount, S.term))} en tu cuenta.</p>
-  <div class="succ__rows"><p>${ic('clock', 18)}Podés cancelarlo hasta hoy a las 15 h.</p><p>${ic('bell', 18)}Te avisamos 3 días antes del vencimiento.</p></div></div>
+  <div class="succ__rows"><p>${ic('clock', 18)}Podés cancelarlo hasta hoy a las 15 hs.</p><p>${ic('bell', 18)}Te avisamos 3 días antes del vencimiento.</p></div></div>
   ${foot(`<button class="btn" style="background:#fff;color:var(--night-1)" data-go="plazos" data-tr="fade">Ver mis plazos fijos</button><button class="btn btn--on-night" style="margin-top:8px" data-go="inicio" data-tr="fade">Volver al inicio</button>`)}` },
 
 plazos: { f: 'Armar el primer plazo fijo', l: 'Plazos fijos', pop: 99, r: () => { const q = ACCOUNT - S.amount; return `${nav('Plazos fijos')}
   <div class="pad"><p class="t-label c2" style="margin-top:8px">Saldo total</p><p class="t-display">${$(ACCOUNT)}</p>
   <div class="night" style="margin-top:16px"><p class="t-label">Cómo está repartido tu dinero</p><div style="margin-top:14px">${bar([{ v: q / 10000, c: 'var(--available)', l: 'Disponible' }, { v: S.amount / 10000, c: 'var(--deposit)', l: 'En plazos fijos' }])}</div></div>
-  <div class="card card--agent" style="margin-top:10px"><div class="row">${agentChip('Sugerencias activas')}<button class="icon-btn" style="background:var(--bg)" data-go="actividad" aria-label="Ver actividad y reglas">${ic('sliders', 18)}</button></div>
+  <div class="card" style="margin-top:10px"><div class="row">${agentChip('Sugerencias activas')}<button class="icon-btn" style="background:var(--bg)" data-go="actividad" aria-label="Ver actividad y reglas">${ic('sliders', 18)}</button></div>
   <p class="t-headline" style="margin-top:10px">Te vamos a sugerir el próximo plazo fijo cuando cobres el sueldo.</p></div>
   <div class="list" style="margin-top:10px">${li({ date: DUE[S.term], t: `Plazo fijo a ${S.term} días`, s: `Intereses: ${$(interest(S.amount, S.term))}`, end: `<b>${$(S.amount)}</b>` })}</div>
-  <div class="note note--info" style="margin-top:10px">${ic('clock', 18)}<span>Podés cancelarlo hasta hoy a las 15 h.</span></div></div>`; } },
+  <div class="note note--info" style="margin-top:10px">${ic('clock', 18)}<span>Podés cancelarlo hasta hoy a las 15 hs.</span></div></div>`; } },
 
 /* ===== 2. Unas semanas después (6/12) ===== */
 'plazos-dic': { f: 'Unas semanas después', l: 'Plazos fijos, 6/12', r: () => `${nav('Plazos fijos')}
   <div class="pad"><p class="t-label c2" style="margin-top:8px">Saldo total</p><p class="t-display">$1.000.000</p><p class="t-label pos" style="margin-top:6px;font-weight:600">+$19.460 de intereses estimados</p>
   <div class="night" style="margin-top:16px"><p class="t-label">Cómo está repartido tu dinero</p><div style="margin-top:14px">${bar([{ v: 28, c: 'var(--available)', l: 'Disponible' }, { v: 30, c: 'var(--agent)', l: 'Vence el 9/12' }, { v: 42, c: 'var(--deposit)', l: 'Otros plazos fijos' }])}</div></div>
-  <div class="card card--agent" style="margin-top:10px"><div class="row">${agentChip()}<button class="icon-btn" style="background:var(--bg)" data-go="actividad" aria-label="Ver actividad y reglas">${ic('sliders', 18)}</button></div>
+  <div class="card" style="margin-top:10px"><div class="row">${agentChip()}<button class="icon-btn" style="background:var(--bg)" data-go="actividad" aria-label="Ver actividad y reglas">${ic('sliders', 18)}</button></div>
   <p class="t-headline" style="margin-top:10px">Tu plazo fijo de $300.000 vence el 9/12. Renovalo por 30 días más.</p>
   <div class="row" style="gap:8px;margin-top:12px"><button class="btn btn--primary btn--s" data-go="renovado" data-tr="none">Renovar</button><button class="btn btn--secondary btn--s" data-go="opciones" data-tr="none">Otras opciones</button></div></div>
   <div class="list" style="margin-top:10px">${li({ date: '30/1', t: 'Plazo fijo a 60 días', s: 'Intereses: $10.340', end: '<b>$170.000</b>' })}${li({ date: '1/3', t: 'UVA precancelable', s: 'Se ajusta por inflación', end: '<b>$250.000</b>' })}</div></div>
