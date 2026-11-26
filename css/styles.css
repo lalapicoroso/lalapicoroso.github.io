@@ -2390,6 +2390,7 @@ mark.hl {
 }
 
 .rotator__text {
+  font-weight: 700; /* palabra rotativa del hero en Bold; el resto del título queda en Medium */
   color: var(--accent-ink);
   background: linear-gradient(var(--accent-bg), var(--accent-bg)) no-repeat center / 100% 0.9em;
   padding: 0 0.06em;
